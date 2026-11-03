@@ -1,15 +1,21 @@
 /* Pantalla de carga de Infinity Glass.
    Vive fuera del lienzo de diseno: no agrega nodos a la pagina, se dibuja con
-   los pseudoelementos de <html> y por eso aparece con el primer byte, antes
-   de que corra ningun script. motor.js pone la clase .ig-listo cuando la
-   primera pantalla ya tiene sus fuentes e imagenes, y entonces se desvanece.
+   los pseudoelementos de <html>.
 
-   Mientras tanto las animaciones de la pagina quedan en pausa, para que la
-   entrada del banner arranque cuando el visitante ya la puede ver y no detras
-   del cargador. */
+   Quien la enciende y la apaga:
+   - Un script de una linea en el <head> pone .ig-cargando al instante y se
+     programa su propio tope: pase lo que pase, a los 4 s pone .ig-listo.
+   - motor.js pone .ig-listo antes, apenas la primera pantalla tiene sus
+     fuentes e imagenes.
+   Todo depende de .ig-cargando: si ese script no corre, no hay cargador ni
+   pausa, y la pagina se ve como siempre. Asi una mezcla de archivos nuevos y
+   viejos en la cache del navegador nunca deja el banner congelado.
 
-html::before,
-html::after {
+   Mientras carga, las animaciones de la pagina quedan en pausa, para que la
+   entrada del banner arranque cuando el visitante ya la puede ver. */
+
+html.ig-cargando::before,
+html.ig-cargando::after {
   position: fixed;
   z-index: 2147483646;
   pointer-events: none;
@@ -17,7 +23,7 @@ html::after {
 }
 
 /* Fondo, con el mismo degradado del banner, y el nombre de la marca. */
-html::before {
+html.ig-cargando::before {
   content: "Infinity Glass";
   inset: 0;
   display: flex;
@@ -30,11 +36,11 @@ html::before {
   font: 600 12px/1 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   letter-spacing: .28em;
   text-transform: uppercase;
-  pointer-events: auto;              /* nada debajo recibe clics mientras carga */
 }
+html.ig-cargando:not(.ig-listo)::before { pointer-events: auto; }   /* nada debajo recibe clics */
 
 /* Anillo azul de la marca. */
-html::after {
+html.ig-cargando::after {
   content: "";
   top: 50%;
   left: 50%;
@@ -51,37 +57,23 @@ html::after {
 
 @keyframes ig-cargador-giro { to { transform: rotate(360deg); } }
 
-/* Listo: se desvanece y deja de interceptar clics. */
-html.ig-listo::before,
-html.ig-listo::after {
+/* Listo: se desvanece. */
+html.ig-cargando.ig-listo::before,
+html.ig-cargando.ig-listo::after {
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
 }
-html.ig-listo::after { animation: none; }
-
-/* Red de seguridad: si el script no llegara a correr, el cargador se va solo. */
-html:not(.ig-listo)::before,
-html:not(.ig-listo)::after {
-  animation-name: ig-cargador-giro, ig-cargador-fuera;
-  animation-duration: .8s, .01s;
-  animation-timing-function: linear, linear;
-  animation-iteration-count: infinite, 1;
-  animation-delay: 0s, 6s;
-  animation-fill-mode: none, forwards;
-}
-html:not(.ig-listo)::before { animation-name: none, ig-cargador-fuera; }
-
-@keyframes ig-cargador-fuera { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+html.ig-cargando.ig-listo::after { animation: none; }
 
 /* Las animaciones de la pagina esperan a que el cargador se vaya. */
-html:not(.ig-listo) body *,
-html:not(.ig-listo) body *::before,
-html:not(.ig-listo) body *::after {
+html.ig-cargando:not(.ig-listo) body *,
+html.ig-cargando:not(.ig-listo) body *::before,
+html.ig-cargando:not(.ig-listo) body *::after {
   animation-play-state: paused !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html::after { animation-duration: 2.4s; }
-  html::before, html::after { transition-duration: .15s, 0s; transition-delay: 0s, .15s; }
+  html.ig-cargando::after { animation-duration: 2.4s; }
+  html.ig-cargando::before,
+  html.ig-cargando::after { transition-duration: .15s, 0s; transition-delay: 0s, .15s; }
 }
