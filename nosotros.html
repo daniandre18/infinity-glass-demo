@@ -1,0 +1,1449 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nosotros · Infinity Glass</title>
+<meta name="description" content="Quiénes somos, cómo revisamos cada equipo y dónde estamos en Bogotá.">
+<meta name="theme-color" content="#0848FF">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nosotros · Infinity Glass">
+<meta property="og:description" content="Quiénes somos, cómo revisamos cada equipo y dónde estamos en Bogotá.">
+<meta property="og:image" content="assets/914e09bbee632f47b29defceb7204137.webp">
+<link rel="icon" href="assets/914e09bbee632f47b29defceb7204137.webp">
+<style>
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-800-normal.woff2') format('woff2')}
+</style>
+<style>
+body{margin:0}
+a{color:#0848FF}a:hover{color:#087CFF}
+.cta{transition:filter .15s ease}
+.cta:hover{filter:brightness(0.88)}
+.cta:focus-visible{outline:3px solid #0848FF;outline-offset:2px}
+.wa{transition:filter .15s ease}
+.wa:hover{filter:brightness(1.12)}
+.card{transition:box-shadow .15s ease}
+.card:hover{box-shadow:0 6px 20px rgba(14,17,22,0.08)}
+.rango{position:relative;height:34px}
+.rango .pista{position:absolute;left:0;right:0;top:15px;height:4px;border-radius:2px;background:#E0E4EB}
+.rango .lleno{position:absolute;top:15px;height:4px;border-radius:2px;background:#0848FF}
+.rango input{position:absolute;left:0;top:0;width:100%;height:34px;margin:0;background:none;pointer-events:none;-webkit-appearance:none;appearance:none}
+.rango input:focus{outline:none}
+.rango input::-webkit-slider-thumb{pointer-events:auto;-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#0848FF;border:3px solid #FFFFFF;box-shadow:0 1px 4px rgba(14,17,22,.35);cursor:pointer}
+.rango input::-moz-range-thumb{pointer-events:auto;width:18px;height:18px;border-radius:50%;background:#0848FF;border:3px solid #FFFFFF;box-shadow:0 1px 4px rgba(14,17,22,.35);cursor:pointer}
+@media (prefers-reduced-motion: reduce){.cta,.wa,.card{transition:none}}
+.ign{
+  --ign-negro:#080B10;
+  --ign-azul:#0848FF;
+  --ign-cian:#00C8FF;
+  --ign-blanco:#FFFFFF;
+  --ign-gris:#F1F3F6;
+  --ign-texto:#101318;
+  --ign-suave:#5F6E84;
+  --ign-borde:#E0E4EB;
+  --ign-bordeOsc:#242C3A;
+
+  position:sticky; top:0; z-index:900;
+  font-family:inherit;
+  transition:box-shadow .3s ease;
+}
+.ign *{ box-sizing:border-box; }
+.ign__oculto{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+.ign__int{
+  max-width:1200px; margin:0 auto; padding:0 24px;
+  display:flex; align-items:center; gap:18px;
+}
+
+/* ---------- Nivel 1: avisos ---------- */
+.ign__avisos{
+  background:var(--ign-azul); color:#FFFFFF;
+  height:30px; overflow:hidden;
+  transition:height .3s ease, opacity .3s ease;
+}
+.ign__avisosInt{
+  height:30px; display:flex; align-items:center; justify-content:center; gap:14px;
+  font-size:13px; font-weight:600;
+}
+.ign__punto{ width:4px; height:4px; border-radius:50%; background:rgba(255,255,255,.55); }
+.ign.scrolled .ign__avisos{ height:0; opacity:0; }     /* se repliega y libera alto */
+
+/* ---------- Nivel 2: principal ---------- */
+.ign__principal{
+  background:var(--ign-negro);
+  transition:background .3s ease, box-shadow .3s ease;
+}
+.ign__principal .ign__int{ height:74px; }
+.ign.scrolled .ign__principal{ background:var(--ign-blanco); }
+
+.ign__logo{ flex:none; text-decoration:none; }
+.ign__logoTexto{
+  font-size:19px; font-weight:800; letter-spacing:.04em; color:#FFFFFF; white-space:nowrap;
+  transition:color .3s ease;
+}
+.ign__logoTexto b{ color:var(--ign-cian); font-weight:800; }
+.ign.scrolled .ign__logoTexto{ color:var(--ign-texto); }
+.ign.scrolled .ign__logoTexto b{ color:var(--ign-azul); }
+
+.ign__buscador{
+  flex:1 1 auto; min-width:0; position:relative;
+  display:flex; align-items:center; gap:10px;
+  height:44px; padding:0 6px 0 16px;
+  border:1px solid var(--ign-bordeOsc); border-radius:999px;
+  background:#141A24;
+  transition:background .3s ease, border-color .3s ease;
+}
+.ign__buscador:focus-within{ border-color:var(--ign-azul); }
+.ign__lupa{ flex:none; color:#8795A8; transition:color .3s ease; }
+.ign__input{
+  flex:1 1 auto; min-width:0; border:0; outline:none; background:transparent;
+  font-family:inherit; font-size:15px; color:#F5F7FA;
+}
+.ign__input::placeholder{ color:#7D8A9C; }
+.ign__buscarBtn{
+  flex:none; display:inline-flex; align-items:center; justify-content:center; line-height:1;
+  height:34px; padding:0 18px; border:0; border-radius:999px;
+  background:var(--ign-azul); color:#FFFFFF; font-family:inherit;
+  font-size:14px; font-weight:700; cursor:pointer;
+  transition:background .2s ease;
+}
+.ign__buscarBtn:hover{ background:#0640DB; }
+.ign.scrolled .ign__buscador{ background:var(--ign-gris); border-color:var(--ign-borde); }
+.ign.scrolled .ign__input{ color:var(--ign-texto); }
+.ign.scrolled .ign__input::placeholder{ color:var(--ign-suave); }
+.ign.scrolled .ign__lupa{ color:var(--ign-suave); }
+
+.ign__acciones{ flex:none; display:flex; align-items:center; gap:4px; }
+.ign__icono{
+  position:relative; width:42px; height:42px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  color:#F5F7FA; text-decoration:none;
+  transition:color .3s ease, background .2s ease;
+}
+.ign__icono:hover{ background:rgba(255,255,255,.08); }
+.ign.scrolled .ign__icono{ color:var(--ign-texto); }
+.ign.scrolled .ign__icono:hover{ background:var(--ign-gris); }
+.ign__globo{
+  position:absolute; top:4px; right:3px; min-width:18px; height:18px; padding:0 5px;
+  border-radius:999px; background:var(--ign-azul); color:#FFFFFF;
+  font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center;
+}
+
+/* ---------- Nivel 3: categorias ---------- */
+.ign__cats{
+  background:var(--ign-negro);
+  border-top:1px solid var(--ign-bordeOsc);
+  transition:background .3s ease, border-color .3s ease;
+}
+.ign.scrolled .ign__cats{ background:var(--ign-blanco); border-top-color:var(--ign-borde); }
+.ign__int--cats{ height:46px; justify-content:center; gap:40px; }
+.ign__lista{ display:flex; align-items:center; gap:4px; margin:0; padding:0; list-style:none; }
+.ign__lista--servicio{ gap:18px; }
+.ign__item{ position:relative; }
+
+.ign__disp, .ign__enlace{
+  display:inline-flex; align-items:center; gap:7px;
+  height:46px; padding:0 12px;
+  border:0; background:none; cursor:pointer;
+  font-family:inherit; font-size:15px; font-weight:600;
+  color:#E6EBF2; text-decoration:none; white-space:nowrap;
+  transition:color .3s ease;
+}
+.ign__enlace--of{ color:var(--ign-cian); }
+.ign.scrolled .ign__disp, .ign.scrolled .ign__enlace{ color:var(--ign-texto); }
+.ign.scrolled .ign__enlace--of{ color:var(--ign-azul); }
+.ign__disp:hover, .ign__enlace:hover{ color:var(--ign-cian); }
+.ign.scrolled .ign__disp:hover, .ign.scrolled .ign__enlace:hover{ color:var(--ign-azul); }
+.ign__disp:focus-visible, .ign__enlace:focus-visible, .ign__icono:focus-visible,
+.ign__hamburguesa:focus-visible, .ign__acc:focus-visible{
+  outline:2px solid var(--ign-cian); outline-offset:-3px; border-radius:6px;
+}
+.ign.scrolled .ign__disp:focus-visible, .ign.scrolled .ign__enlace:focus-visible{ outline-color:var(--ign-azul); }
+
+.ign__flecha{
+  width:7px; height:7px; border-right:2px solid currentColor; border-bottom:2px solid currentColor;
+  transform:rotate(45deg) translate(-2px,-2px); opacity:.6;
+  transition:transform .25s ease;
+}
+.ign__disp[aria-expanded="true"] .ign__flecha{ transform:rotate(-135deg) translate(-2px,-2px); }
+
+/* ---------- Desplegables ---------- */
+.ign__menu{
+  position:absolute; top:100%; left:0; z-index:5;
+  min-width:230px; padding:16px;
+  background:var(--ign-blanco);
+  border:1px solid var(--ign-borde); border-radius:14px;
+  box-shadow:0 18px 40px rgba(10,14,20,.16);
+  opacity:0; visibility:hidden; transform:translateY(-6px);
+  transition:opacity .22s ease, transform .22s ease, visibility .22s;
+}
+.ign__menu--ancho{ min-width:660px; }
+.ign__item.abierto .ign__menu{ opacity:1; visibility:visible; transform:none; }
+.ign__cols{ display:flex; gap:22px; }
+.ign__col{ display:flex; flex-direction:column; min-width:140px; }
+.ign__colTit{
+  margin:0 0 8px; font-size:11px; font-weight:800; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--ign-suave);
+}
+.ign__menu a{
+  padding:7px 8px; margin:0 -8px; border-radius:8px;
+  font-size:15px; color:var(--ign-texto); text-decoration:none;
+  transition:background .15s ease, color .15s ease;
+}
+.ign__menu a:hover{ background:var(--ign-gris); color:var(--ign-azul); }
+.ign__destaque{
+  display:flex !important; flex-direction:column; gap:6px; justify-content:center;
+  min-width:220px; padding:16px !important; margin:0 !important;
+  border-radius:12px !important;
+  background:linear-gradient(150deg,#101826 0%,#070B12 100%);
+  color:#F5F7FA !important;
+}
+.ign__destaque:hover{ background:linear-gradient(150deg,#16203200,#0A1320) !important; color:#FFFFFF !important; }
+.ign__destaqueTit{ font-size:15px; font-weight:800; }
+.ign__destaqueTxt{ font-size:13px; color:#94A1B3; line-height:1.4; }
+
+/* ---------- Movil ---------- */
+.ign__hamburguesa{
+  display:none; flex:none; width:42px; height:42px;
+  border:0; background:none; cursor:pointer;
+  flex-direction:column; align-items:center; justify-content:center; gap:5px;
+}
+.ign__hamLinea{
+  width:20px; height:2px; border-radius:2px; background:#F5F7FA;
+  transition:background .3s ease, transform .25s ease, opacity .2s ease;
+}
+.ign.scrolled .ign__hamLinea{ background:var(--ign-texto); }
+.ign__hamburguesa[aria-expanded="true"] .ign__hamLinea:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.ign__hamburguesa[aria-expanded="true"] .ign__hamLinea:nth-child(2){ opacity:0; }
+.ign__hamburguesa[aria-expanded="true"] .ign__hamLinea:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+/* Cajon lateral: entra desde la izquierda por encima de la pagina.
+   Nada de [hidden]: la regla display:block del media query le ganaba al atributo
+   y el menu salia abierto de entrada. Cerrado = fuera de pantalla + visibility. */
+.ign__panel{
+  position:fixed; top:0; left:0; z-index:60;
+  width:min(86vw,348px); height:100vh; height:100dvh;
+  display:none; flex-direction:column;
+  background:var(--ign-blanco); border-right:1px solid var(--ign-borde);
+  box-shadow:18px 0 48px rgba(8,11,16,.26);
+  overflow-y:auto; overscroll-behavior:contain;
+  transform:translateX(-100%); visibility:hidden;
+  transition:transform .34s cubic-bezier(.22,.8,.26,1), visibility .34s linear;
+}
+.ign__panel.abierto{ transform:translateX(0); visibility:visible; }
+
+.ign__velo{
+  position:fixed; inset:0; z-index:55;
+  background:rgba(8,11,16,.5);
+  -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px);
+  opacity:0; visibility:hidden;
+  transition:opacity .3s ease, visibility .3s linear;
+}
+.ign__velo.abierto{ opacity:1; visibility:visible; }
+
+.ign__panelCab{
+  flex:none; display:flex; align-items:center; justify-content:space-between;
+  gap:12px; padding:16px 20px 10px;
+}
+.ign__panelTit{ font-size:13px; font-weight:800; letter-spacing:.08em; color:var(--ign-suave); }
+.ign__cerrar{
+  flex:none; width:40px; height:40px; margin-right:-8px; padding:0;
+  border:0; border-radius:50%; background:var(--ign-gris); color:var(--ign-texto);
+  display:flex; align-items:center; justify-content:center; cursor:pointer;
+  transition:background .2s ease;
+}
+.ign__cerrar:hover{ background:#E4E8EF; }
+
+/* los renglones entran escalonados detras del cajon */
+.ign__panelInt > *{ opacity:0; transform:translateX(-12px); transition:opacity .3s ease, transform .3s ease; }
+.ign__panel.abierto .ign__panelInt > *{ opacity:1; transform:translateX(0); }
+.ign__panel.abierto .ign__panelInt > *:nth-child(1){ transition-delay:.08s }
+.ign__panel.abierto .ign__panelInt > *:nth-child(2){ transition-delay:.11s }
+.ign__panel.abierto .ign__panelInt > *:nth-child(3){ transition-delay:.14s }
+.ign__panel.abierto .ign__panelInt > *:nth-child(4){ transition-delay:.17s }
+.ign__panel.abierto .ign__panelInt > *:nth-child(5){ transition-delay:.20s }
+.ign__panel.abierto .ign__panelInt > *:nth-child(6){ transition-delay:.23s }
+.ign__panel.abierto .ign__panelInt > *:nth-child(7){ transition-delay:.26s }
+.ign__panel.abierto .ign__panelInt > *:nth-child(n+8){ transition-delay:.29s }
+.ign__panelInt{ padding:8px 20px 20px; display:flex; flex-direction:column; }
+.ign__acc, .ign__panelEnlace{
+  display:flex; align-items:center; justify-content:space-between;
+  width:100%; min-height:52px; padding:0 2px;
+  border:0; border-bottom:1px solid var(--ign-borde); background:none;
+  font-family:inherit; font-size:16px; font-weight:600; color:var(--ign-texto);
+  text-decoration:none; cursor:pointer; text-align:left;
+}
+.ign__accCuerpo{ display:none; padding:4px 0 10px; flex-direction:column; }
+.ign__accCuerpo.abierto{ display:flex; }
+.ign__accCuerpo a{
+  padding:11px 12px; font-size:15px; color:var(--ign-suave); text-decoration:none;
+  border-radius:8px;
+}
+.ign__accCuerpo a:hover{ background:var(--ign-gris); color:var(--ign-azul); }
+.ign__acc[aria-expanded="true"] .ign__flecha{ transform:rotate(-135deg) translate(-2px,-2px); }
+
+@media (max-width:980px){
+  .ign__int{ padding:0 16px; gap:10px; }
+  .ign__hamburguesa{ display:flex; }
+  .ign__cats{ display:none; }
+  .ign__principal .ign__int{ height:58px; }
+  .ign__buscarBtn{ display:none; }
+  .ign__buscador{ height:40px; padding:0 14px; }
+  .ign__logoTexto{ font-size:16px; }
+  .ign__avisosInt{ font-size:11.5px; gap:9px; }
+  .ign__panel{ display:flex; }
+  .ign__icono{ width:38px; height:38px; }
+}
+@media (max-width:560px){
+  .ign__logoTexto b{ display:none; }
+  .ign__avisosInt span:nth-child(n+3){ display:none; }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .ign, .ign *{ transition:none !important; }
+}
+
+/* Vidrio esmerilado: el contenido se ve pasar detras del menu. */
+.ign.scrolled .ign__principal,
+.ign.scrolled .ign__cats{
+  background:rgba(255,255,255,.96);
+  -webkit-backdrop-filter:blur(20px) saturate(140%);
+  backdrop-filter:blur(20px) saturate(140%);
+}
+.ign.scrolled .ign__cats{ border-top-color:rgba(224,228,235,.7); }
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .ign.scrolled .ign__principal, .ign.scrolled .ign__cats{ background:#FFFFFF; }
+}
+
+.ign__logoImg{ display:block; height:48px; width:auto; }
+@media (max-width:980px){ .ign__logoImg{ height:38px; } }
+
+.ign__disp--act{ color:#0848FF !important; box-shadow:inset 0 -2px 0 #0848FF; }
+/* El menu arranca oscuro, como en el home: el heroe de esta pantalla tambien
+   es negro y el vidrio blanco solo entra al hacer scroll (clase .scrolled). */
+.ign__enlace[aria-current="page"]{ color:#00C8FF; }
+.ign.scrolled .ign__enlace[aria-current="page"]{ color:#0848FF; }
+.ign.scrolled{ box-shadow:0 6px 20px rgba(16,19,24,.08); }
+
+.social{transition:border-color .15s ease}
+.social:hover{border-color:#00C8FF}
+.wa::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  animation:wa-halo 5s ease-out 1.5s infinite}
+@keyframes wa-halo{
+  0%{box-shadow:0 0 0 0 rgba(15,122,65,.45)}
+  14%{box-shadow:0 0 0 13px rgba(15,122,65,0)}
+  100%{box-shadow:0 0 0 0 rgba(15,122,65,0)}}
+@media (prefers-reduced-motion: reduce){.wa::after{animation:none}}
+
+/* ---------- Filtros en movil: hoja a pantalla completa ---------- */
+.pf-abrir{ display:none; }
+.pf-cab, .pf-pie{ display:none; }
+@media (max-width:900px){
+  .pf-abrir{
+    display:inline-flex; align-items:center; gap:9px;
+    min-height:46px; padding:0 18px; border-radius:12px;
+    border:1px solid #0848FF; background:#FFFFFF; color:#0848FF;
+    font-family:inherit; font-size:14px; font-weight:700; cursor:pointer;
+  }
+  .pf-abrir:hover{ background:#F4F7FF; }
+  .pf-abrir + label{ display:none; }   /* el "Ordenar por" se partia en dos renglones */
+
+  .pf-panel{
+    position:fixed !important; inset:0 !important; z-index:950;
+    width:auto !important; max-width:none !important; flex:none !important;
+    border:0 !important; border-radius:0 !important; padding:0 !important;
+    display:flex !important; flex-direction:column;
+    transform:translateY(100%); visibility:hidden;
+    transition:transform .32s cubic-bezier(.22,.8,.26,1), visibility .32s linear;
+  }
+  .pf-panel.abierto{ transform:translateY(0); visibility:visible; }
+
+  .pf-cab{
+    flex:none; display:flex !important; align-items:center; justify-content:space-between;
+    gap:12px; padding:16px 20px 12px; border-bottom:1px solid #E0E4EB;
+  }
+  .pf-cabTit{ font-size:20px; font-weight:800; letter-spacing:-0.01em; }
+  .pf-cerrar{
+    width:40px; height:40px; margin-right:-6px; padding:0; border:0; border-radius:50%;
+    background:#F1F3F6; color:#101318; display:flex; align-items:center; justify-content:center; cursor:pointer;
+  }
+  .pf-cuerpo{ flex:1 1 auto; overflow-y:auto; overscroll-behavior:contain; padding:4px 20px 12px; }
+  .pf-cuerpo > div:first-child{ display:none !important; }   /* el titulo ya esta en la cabecera */
+  .pf-cuerpo > div:nth-child(2){ border-top:0 !important; }   /* no doblar la linea de la cabecera */
+
+  .pf-pie{
+    flex:none; display:flex !important; gap:12px; padding:14px 20px;
+    border-top:1px solid #E0E4EB; background:#FFFFFF;
+    padding-bottom:calc(14px + env(safe-area-inset-bottom));
+  }
+  .pf-pie > *{ flex:1 1 0; min-width:0; min-height:52px; border-radius:12px;
+    font-family:inherit; font-size:16px; font-weight:700; cursor:pointer;
+    display:flex; align-items:center; justify-content:center; }
+  .pf-limpiar{ border:1px solid #0848FF; background:#FFFFFF; color:#0848FF; }
+  .pf-aplicar{ border:0; background:#0848FF; color:#FFFFFF; }
+  .pf-aplicar:hover{ background:#0640DB; }
+}
+@media (prefers-reduced-motion:reduce){ .pf-panel{ transition:none; } }
+
+/* ---------- Carrito ---------- */
+.ca-fila{ display:grid; grid-template-columns:minmax(0,1.55fr) minmax(0,1fr); gap:32px; align-items:start; }
+.ca-resumen{ position:sticky; top:118px; }
+.ca-barra{ display:flex; gap:16px; }
+@media (max-width:980px){
+  .ca-fila{ grid-template-columns:1fr !important; }
+  .ca-resumen{ position:static !important; }
+  .ca-barra{ flex-direction:column !important; gap:12px !important; }
+  .ca-item{ grid-template-columns:96px minmax(0,1fr) !important; }
+  .ca-precio{ grid-column:2 !important; text-align:left !important; }
+}
+
+/* ---------- Carrito previo (entra por la derecha) ---------- */
+.ign__mini{
+  position:fixed; top:0; right:0; z-index:60;
+  width:min(92vw,404px); height:100vh; height:100dvh;
+  display:flex; flex-direction:column;
+  background:var(--ign-blanco); border-left:1px solid var(--ign-borde);
+  box-shadow:-18px 0 48px rgba(8,11,16,.26);
+  transform:translateX(100%); visibility:hidden;
+  transition:transform .32s cubic-bezier(.22,.8,.26,1), visibility .32s linear;
+}
+.ign__mini.abierto{ transform:translateX(0); visibility:visible; }
+.ign__miniCab{
+  flex:none; display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:18px 20px 14px; border-bottom:1px solid var(--ign-borde);
+}
+.ign__miniTit{ font-size:18px; font-weight:800; letter-spacing:-0.01em; color:var(--ign-texto); }
+.ign__miniCerrar{
+  width:38px; height:38px; margin-right:-6px; padding:0; border:0; border-radius:50%;
+  background:var(--ign-gris); color:var(--ign-texto);
+  display:flex; align-items:center; justify-content:center; cursor:pointer;
+}
+.ign__miniCuerpo{
+  flex:1 1 auto; overflow-y:auto; overscroll-behavior:contain;
+  padding:16px 20px; display:flex; flex-direction:column; gap:16px;
+}
+.ign__miniEnvio{
+  display:flex; align-items:center; gap:10px; padding:11px 13px; border-radius:11px;
+  background:#E8F6EE; border:1px solid #BFE6D1; color:#0B5C39; font-size:13px; font-weight:700;
+}
+.ign__miniItem{ display:grid; grid-template-columns:64px minmax(0,1fr); gap:13px; align-items:start; }
+.ign__miniFoto{
+  width:64px; height:64px; border-radius:11px; background:var(--ign-gris);
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
+}
+.ign__miniNom{ font-size:14.5px; font-weight:700; line-height:1.3; color:var(--ign-texto); }
+.ign__miniSub{ font-size:12.5px; color:var(--ign-suave); padding-top:2px; }
+.ign__miniLinea{ display:flex; align-items:baseline; justify-content:space-between; gap:10px; padding-top:6px; }
+.ign__miniPrecio{ font-size:15px; font-weight:800; color:var(--ign-texto); }
+.ign__miniPie{
+  flex:none; border-top:1px solid var(--ign-borde); background:var(--ign-blanco);
+  padding:16px 20px; padding-bottom:calc(16px + env(safe-area-inset-bottom));
+  display:flex; flex-direction:column; gap:11px;
+}
+.ign__miniTotal{ display:flex; align-items:baseline; justify-content:space-between; gap:12px; }
+.ign__miniBtn, .ign__miniBtn2{
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  min-height:50px; border-radius:12px; font-size:15px; font-weight:700; text-decoration:none; cursor:pointer;
+}
+.ign__miniBtn{ background:var(--ign-azul); color:#FFFFFF; border:0; }
+.ign__miniBtn:hover{ background:#0640DB; }
+.ign__miniBtn2{ background:#FFFFFF; color:var(--ign-texto); border:1px solid var(--ign-borde); }
+.ign__miniBtn2:hover{ background:var(--ign-gris); }
+@media (prefers-reduced-motion:reduce){ .ign__mini{ transition:none; } }
+
+.ig-mapa{transition:border-color .2s ease}
+.ig-mapa:hover{border-color:#0848FF}
+
+.ign__paso{ display:inline-flex; align-items:center; border:1px solid var(--ign-borde); border-radius:9px; overflow:hidden; }
+.ign__pasoBtn{
+  width:32px; height:32px; padding:0; border:0; background:#FFFFFF; color:var(--ign-texto);
+  font-family:inherit; font-size:17px; line-height:1; cursor:pointer;
+}
+.ign__pasoBtn:hover{ background:var(--ign-gris); }
+.ign__pasoBtn[disabled]{ color:#C7CEDA; cursor:default; }
+.ign__pasoBtn[disabled]:hover{ background:#FFFFFF; }
+.ign__pasoNum{ min-width:30px; text-align:center; font-size:14px; font-weight:700; color:var(--ign-texto); }
+
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } }
+
+/* ---------- Modo oscuro ----------
+   El color vive en el atributo style de cada elemento (asi lo edita el panel),
+   de modo que el tema se cambia POR VALOR. Cada regla se escribe en las cuatro
+   formas en que el navegador o el editor pueden serializar ese color (con
+   espacio y sin el, en hex y en rgb) para que el tema no dependa de como quede
+   escrito el atributo. Contrastes sobre la tarjeta #1D2834: titulo 13,3:1 ·
+   texto 6,9:1 · azul 5,9:1 · blanco sobre boton azul 6,2:1. */
+button.ign__icono{ border:0; background:transparent; padding:0; font:inherit; cursor:pointer; }
+[data-tema] { transition:background-color .25s ease, color .25s ease; }
+
+[data-tema="oscuro"]{ background:#141C27 !important; color:#EDF2F8 !important; min-height:100%; }
+html:has([data-tema="oscuro"]), body:has([data-tema="oscuro"]){ background:#141C27; }
+
+/* superficies */[data-tema="oscuro"] [style*="background: #FFFFFF" i],
+[data-tema="oscuro"] [style*="background:#FFFFFF" i],
+[data-tema="oscuro"] [style*="background: rgb(255, 255, 255)" i],
+[data-tema="oscuro"] [style*="background:rgb(255, 255, 255)" i]{ background:#1D2834 !important; }
+[data-tema="oscuro"] [style*="background-color: #FFFFFF" i],
+[data-tema="oscuro"] [style*="background-color:#FFFFFF" i],
+[data-tema="oscuro"] [style*="background-color: rgb(255, 255, 255)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(255, 255, 255)" i]{ background-color:#1D2834 !important; }
+[data-tema="oscuro"] [style*="background: #F1F3F6" i],
+[data-tema="oscuro"] [style*="background:#F1F3F6" i],
+[data-tema="oscuro"] [style*="background: rgb(241, 243, 246)" i],
+[data-tema="oscuro"] [style*="background:rgb(241, 243, 246)" i]{ background:#141C27 !important; }
+[data-tema="oscuro"] [style*="background-color: #F1F3F6" i],
+[data-tema="oscuro"] [style*="background-color:#F1F3F6" i],
+[data-tema="oscuro"] [style*="background-color: rgb(241, 243, 246)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(241, 243, 246)" i]{ background-color:#141C27 !important; }
+[data-tema="oscuro"] [style*="background: #F1F5F9" i],
+[data-tema="oscuro"] [style*="background:#F1F5F9" i],
+[data-tema="oscuro"] [style*="background: rgb(241, 245, 249)" i],
+[data-tema="oscuro"] [style*="background:rgb(241, 245, 249)" i]{ background:#232F3D !important; }
+[data-tema="oscuro"] [style*="background-color: #F1F5F9" i],
+[data-tema="oscuro"] [style*="background-color:#F1F5F9" i],
+[data-tema="oscuro"] [style*="background-color: rgb(241, 245, 249)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(241, 245, 249)" i]{ background-color:#232F3D !important; }
+[data-tema="oscuro"] [style*="background: #F7F9FC" i],
+[data-tema="oscuro"] [style*="background:#F7F9FC" i],
+[data-tema="oscuro"] [style*="background: rgb(247, 249, 252)" i],
+[data-tema="oscuro"] [style*="background:rgb(247, 249, 252)" i]{ background:#232F3D !important; }
+[data-tema="oscuro"] [style*="background-color: #F7F9FC" i],
+[data-tema="oscuro"] [style*="background-color:#F7F9FC" i],
+[data-tema="oscuro"] [style*="background-color: rgb(247, 249, 252)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(247, 249, 252)" i]{ background-color:#232F3D !important; }
+[data-tema="oscuro"] [style*="background: #EDF1F7" i],
+[data-tema="oscuro"] [style*="background:#EDF1F7" i],
+[data-tema="oscuro"] [style*="background: rgb(237, 241, 247)" i],
+[data-tema="oscuro"] [style*="background:rgb(237, 241, 247)" i]{ background:#232F3D !important; }
+[data-tema="oscuro"] [style*="background-color: #EDF1F7" i],
+[data-tema="oscuro"] [style*="background-color:#EDF1F7" i],
+[data-tema="oscuro"] [style*="background-color: rgb(237, 241, 247)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(237, 241, 247)" i]{ background-color:#232F3D !important; }
+[data-tema="oscuro"] [style*="background: #E9EFF7" i],
+[data-tema="oscuro"] [style*="background:#E9EFF7" i],
+[data-tema="oscuro"] [style*="background: rgb(233, 239, 247)" i],
+[data-tema="oscuro"] [style*="background:rgb(233, 239, 247)" i]{ background:#2B394A !important; }
+[data-tema="oscuro"] [style*="background-color: #E9EFF7" i],
+[data-tema="oscuro"] [style*="background-color:#E9EFF7" i],
+[data-tema="oscuro"] [style*="background-color: rgb(233, 239, 247)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(233, 239, 247)" i]{ background-color:#2B394A !important; }
+[data-tema="oscuro"] [style*="background: #E0E4EB" i],
+[data-tema="oscuro"] [style*="background:#E0E4EB" i],
+[data-tema="oscuro"] [style*="background: rgb(224, 228, 235)" i],
+[data-tema="oscuro"] [style*="background:rgb(224, 228, 235)" i]{ background:#2E3A4A !important; }
+[data-tema="oscuro"] [style*="background-color: #E0E4EB" i],
+[data-tema="oscuro"] [style*="background-color:#E0E4EB" i],
+[data-tema="oscuro"] [style*="background-color: rgb(224, 228, 235)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(224, 228, 235)" i]{ background-color:#2E3A4A !important; }
+[data-tema="oscuro"] [style*="background: #E6EDFF" i],
+[data-tema="oscuro"] [style*="background:#E6EDFF" i],
+[data-tema="oscuro"] [style*="background: rgb(230, 237, 255)" i],
+[data-tema="oscuro"] [style*="background:rgb(230, 237, 255)" i]{ background:#16284D !important; }
+[data-tema="oscuro"] [style*="background-color: #E6EDFF" i],
+[data-tema="oscuro"] [style*="background-color:#E6EDFF" i],
+[data-tema="oscuro"] [style*="background-color: rgb(230, 237, 255)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(230, 237, 255)" i]{ background-color:#16284D !important; }
+[data-tema="oscuro"] [style*="background: #E8F6EE" i],
+[data-tema="oscuro"] [style*="background:#E8F6EE" i],
+[data-tema="oscuro"] [style*="background: rgb(232, 246, 238)" i],
+[data-tema="oscuro"] [style*="background:rgb(232, 246, 238)" i]{ background:#12301F !important; }
+[data-tema="oscuro"] [style*="background-color: #E8F6EE" i],
+[data-tema="oscuro"] [style*="background-color:#E8F6EE" i],
+[data-tema="oscuro"] [style*="background-color: rgb(232, 246, 238)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(232, 246, 238)" i]{ background-color:#12301F !important; }
+[data-tema="oscuro"] [style*="background: #E3F4EC" i],
+[data-tema="oscuro"] [style*="background:#E3F4EC" i],
+[data-tema="oscuro"] [style*="background: rgb(227, 244, 236)" i],
+[data-tema="oscuro"] [style*="background:rgb(227, 244, 236)" i]{ background:#12301F !important; }
+[data-tema="oscuro"] [style*="background-color: #E3F4EC" i],
+[data-tema="oscuro"] [style*="background-color:#E3F4EC" i],
+[data-tema="oscuro"] [style*="background-color: rgb(227, 244, 236)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(227, 244, 236)" i]{ background-color:#12301F !important; }
+[data-tema="oscuro"] [style*="background: #E2F3E9" i],
+[data-tema="oscuro"] [style*="background:#E2F3E9" i],
+[data-tema="oscuro"] [style*="background: rgb(226, 243, 233)" i],
+[data-tema="oscuro"] [style*="background:rgb(226, 243, 233)" i]{ background:#12301F !important; }
+[data-tema="oscuro"] [style*="background-color: #E2F3E9" i],
+[data-tema="oscuro"] [style*="background-color:#E2F3E9" i],
+[data-tema="oscuro"] [style*="background-color: rgb(226, 243, 233)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(226, 243, 233)" i]{ background-color:#12301F !important; }
+[data-tema="oscuro"] [style*="background: #FDF0DC" i],
+[data-tema="oscuro"] [style*="background:#FDF0DC" i],
+[data-tema="oscuro"] [style*="background: rgb(253, 240, 220)" i],
+[data-tema="oscuro"] [style*="background:rgb(253, 240, 220)" i]{ background:#3A2A12 !important; }
+[data-tema="oscuro"] [style*="background-color: #FDF0DC" i],
+[data-tema="oscuro"] [style*="background-color:#FDF0DC" i],
+[data-tema="oscuro"] [style*="background-color: rgb(253, 240, 220)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(253, 240, 220)" i]{ background-color:#3A2A12 !important; }
+/* texto */[data-tema="oscuro"] [style*="color: #101318" i],
+[data-tema="oscuro"] [style*="color:#101318" i],
+[data-tema="oscuro"] [style*="color: rgb(16, 19, 24)" i],
+[data-tema="oscuro"] [style*="color:rgb(16, 19, 24)" i]{ color:#EDF2F8 !important; }
+[data-tema="oscuro"] [style*="color: #5F6E84" i],
+[data-tema="oscuro"] [style*="color:#5F6E84" i],
+[data-tema="oscuro"] [style*="color: rgb(95, 110, 132)" i],
+[data-tema="oscuro"] [style*="color:rgb(95, 110, 132)" i]{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] [style*="color: #64748B" i],
+[data-tema="oscuro"] [style*="color:#64748B" i],
+[data-tema="oscuro"] [style*="color: rgb(100, 116, 139)" i],
+[data-tema="oscuro"] [style*="color:rgb(100, 116, 139)" i]{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] [style*="color: #7E8CA0" i],
+[data-tema="oscuro"] [style*="color:#7E8CA0" i],
+[data-tema="oscuro"] [style*="color: rgb(126, 140, 160)" i],
+[data-tema="oscuro"] [style*="color:rgb(126, 140, 160)" i]{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] [style*="color: #087CFF" i],
+[data-tema="oscuro"] [style*="color:#087CFF" i],
+[data-tema="oscuro"] [style*="color: rgb(8, 124, 255)" i],
+[data-tema="oscuro"] [style*="color:rgb(8, 124, 255)" i]{ color:#6EA2FF !important; }
+[data-tema="oscuro"] [style*="color: #0B5C39" i],
+[data-tema="oscuro"] [style*="color:#0B5C39" i],
+[data-tema="oscuro"] [style*="color: rgb(11, 92, 57)" i],
+[data-tema="oscuro"] [style*="color:rgb(11, 92, 57)" i]{ color:#6FD39B !important; }
+[data-tema="oscuro"] [style*="color: #0F7A41" i],
+[data-tema="oscuro"] [style*="color:#0F7A41" i],
+[data-tema="oscuro"] [style*="color: rgb(15, 122, 65)" i],
+[data-tema="oscuro"] [style*="color:rgb(15, 122, 65)" i]{ color:#6FD39B !important; }
+[data-tema="oscuro"] [style*="color: #0F6B3C" i],
+[data-tema="oscuro"] [style*="color:#0F6B3C" i],
+[data-tema="oscuro"] [style*="color: rgb(15, 107, 60)" i],
+[data-tema="oscuro"] [style*="color:rgb(15, 107, 60)" i]{ color:#6FD39B !important; }
+[data-tema="oscuro"] [style*="color: #2F6B4C" i],
+[data-tema="oscuro"] [style*="color:#2F6B4C" i],
+[data-tema="oscuro"] [style*="color: rgb(47, 107, 76)" i],
+[data-tema="oscuro"] [style*="color:rgb(47, 107, 76)" i]{ color:#6FD39B !important; }
+[data-tema="oscuro"] [style*="color: #8A4B08" i],
+[data-tema="oscuro"] [style*="color:#8A4B08" i],
+[data-tema="oscuro"] [style*="color: rgb(138, 75, 8)" i],
+[data-tema="oscuro"] [style*="color:rgb(138, 75, 8)" i]{ color:#E8B468 !important; }
+/* el azul de marca sube de tono como texto, pero no cuando es fondo de boton */[data-tema="oscuro"] [style*="color: #0848FF" i]:not([style*="background-color: #0848FF" i]):not([style*="background: #0848FF" i]):not([style*="background-color: rgb(8, 72, 255)" i]):not([style*="background: rgb(8, 72, 255)" i]),
+[data-tema="oscuro"] [style*="color:#0848FF" i]:not([style*="background-color: #0848FF" i]):not([style*="background: #0848FF" i]):not([style*="background-color: rgb(8, 72, 255)" i]):not([style*="background: rgb(8, 72, 255)" i]),
+[data-tema="oscuro"] [style*="color: rgb(8, 72, 255)" i]:not([style*="background-color: #0848FF" i]):not([style*="background: #0848FF" i]):not([style*="background-color: rgb(8, 72, 255)" i]):not([style*="background: rgb(8, 72, 255)" i]),
+[data-tema="oscuro"] [style*="color:rgb(8, 72, 255)" i]:not([style*="background-color: #0848FF" i]):not([style*="background: #0848FF" i]):not([style*="background-color: rgb(8, 72, 255)" i]):not([style*="background: rgb(8, 72, 255)" i]){ color:#6EA2FF !important; }
+/* bordes: el color puede venir en cualquier propiedad de borde */[data-tema="oscuro"] [style*="#E0E4EB" i],
+[data-tema="oscuro"] [style*="rgb(224, 228, 235)" i]{ border-color:#2E3A4A !important; }
+[data-tema="oscuro"] [style*="#C7CEDA" i],
+[data-tema="oscuro"] [style*="rgb(199, 206, 218)" i]{ border-color:#3B4A5E !important; }
+
+
+/* ---------- Lo que no vive en el atributo style ----------
+   Clases, degradados, controles de formulario (el navegador los pinta blancos
+   por su cuenta) y paneles que estan ocultos en reposo. */
+[data-tema="oscuro"] input:not([type="range"]), [data-tema="oscuro"] select, [data-tema="oscuro"] textarea{
+  background:#232F3D !important; color:#EDF2F8 !important; border-color:#2E3A4A !important;
+}
+[data-tema="oscuro"] input::placeholder, [data-tema="oscuro"] textarea::placeholder{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] input[type="checkbox"], [data-tema="oscuro"] input[type="range"]{ accent-color:#6EA2FF; }
+[data-tema="oscuro"] input[type="range"]{ background:transparent !important; }
+[data-tema="oscuro"] input[type="range"]::-webkit-slider-runnable-track{ background:#2E3A4A !important; }
+[data-tema="oscuro"] input[type="range"]::-moz-range-track{ background:#2E3A4A !important; }
+
+[data-tema="oscuro"] a:not([class]){ color:#6EA2FF; }
+[data-tema="oscuro"] a:not([class]):hover{ color:#9DBDFF; }
+[data-tema="oscuro"] .tile{ background:#232F3D !important; }
+[data-tema="oscuro"] .tile:hover, [data-tema="oscuro"] .tile:focus-visible{ background:#2B394A !important; }
+[data-tema="oscuro"] .rango .pista{ background:#2E3A4A !important; }
+[data-tema="oscuro"] .ign__miniEnvio{ background:#12301F !important; color:#6FD39B !important; }
+[data-tema="oscuro"] .ign__panel, [data-tema="oscuro"] .ign__mini{ background:#1D2834 !important; }
+[data-tema="oscuro"] .ign__pasoBtn, [data-tema="oscuro"] .ign__miniBtn2{ background:#232F3D !important; color:#EDF2F8 !important; }
+[data-tema="oscuro"] .ign__pasoBtn[disabled]:hover{ background:#232F3D !important; }
+[data-tema="oscuro"] .pf-abrir, [data-tema="oscuro"] .pf-limpiar, [data-tema="oscuro"] .pf-pie,
+[data-tema="oscuro"] .pf-panel, [data-tema="oscuro"] .pf-cab, [data-tema="oscuro"] .pf-cuerpo{
+  background:#1D2834 !important; color:#EDF2F8 !important;
+}
+[data-tema="oscuro"] .pf-cerrar{ background:#232F3D !important; color:#EDF2F8 !important; }
+[data-tema="oscuro"] [style*="radial-gradient(88% 96% at 50% 104%"]{
+  background:radial-gradient(88% 96% at 50% 104%, #14402A 0%, #12301F 38%, rgba(18,48,31,0) 82%), #141C27 !important;
+}
+/* la pastilla sobre el mapa dibujado sigue siendo clara: su tinta no se toca */
+[data-tema="oscuro"] [style*="rgba(255,255,255,0.92)"]{ color:#5F6E84 !important; }
+
+/* la cabecera, el cajon y el carrito previo salen de variables: se redefinen */
+[data-tema="oscuro"] .ign{ --ign-blanco:#1D2834; --ign-gris:#232F3D; --ign-texto:#EDF2F8; --ign-borde:#2E3A4A; }
+[data-tema="oscuro"] .ign .ign__principal, [data-tema="oscuro"] .ign .ign__cats,
+[data-tema="oscuro"] .ign.scrolled .ign__principal, [data-tema="oscuro"] .ign.scrolled .ign__cats{
+  background:rgba(16,22,31,.96) !important; border-top-color:#232F3D !important;
+}
+[data-tema="oscuro"] .ign .ign__logoTexto, [data-tema="oscuro"] .ign .ign__icono,
+[data-tema="oscuro"] .ign .ign__disp, [data-tema="oscuro"] .ign .ign__enlace,
+[data-tema="oscuro"] .ign.scrolled .ign__logoTexto, [data-tema="oscuro"] .ign.scrolled .ign__icono,
+[data-tema="oscuro"] .ign.scrolled .ign__disp, [data-tema="oscuro"] .ign.scrolled .ign__enlace{ color:#F5F7FA !important; }
+[data-tema="oscuro"] .ign .ign__enlace--of{ color:#6EA2FF !important; }
+[data-tema="oscuro"] .ign .ign__buscador{ background:#232F3D !important; border-color:#2E3A4A !important; }
+[data-tema="oscuro"] .ign .ign__input{ color:#F5F7FA !important; }
+[data-tema="oscuro"] .ign .ign__input::placeholder{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] .ign .ign__lupa{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] .ign .ign__hamLinea{ background:#F5F7FA !important; }
+[data-tema="oscuro"] .ign .ign__icono:hover{ background:rgba(255,255,255,.08) !important; }
+
+/* la tira de anuncios y el pie ya eran oscuros: se quedan como estan */
+
+
+/* ---------- Buscador en el telefono ----------
+   Entre el logo y los iconos el campo queda espichado, asi que bajo 760 px cae
+   a su propia fila, a lo ancho y con el boton Buscar al lado. Sin capas ni
+   clics previos: se ve y se escribe. */
+@media (max-width:760px){
+  .ign__principal .ign__int{
+    flex-wrap:wrap; height:auto;
+    padding-top:9px; padding-bottom:10px; row-gap:9px;
+  }
+  .ign__buscador{ order:5; flex:1 0 100%; height:46px; padding:0 14px; }
+  .ign__input{ font-size:16px; }          /* menos de 16 y iOS hace zoom al enfocar */
+  .ign__buscarBtn{ display:inline-flex; height:34px; padding:0 15px; font-size:14px; }
+}
+
+/* En el telefono: hamburguesa a la izquierda, logo centrado de verdad (centrado
+   absoluto, no por reparto de espacio, para que no se corra cuando los dos
+   lados pesan distinto) y los iconos a la derecha. */
+@media (max-width:760px){
+  .ign__principal .ign__int{ position:relative; }
+  .ign__logo{
+    position:absolute; left:50%; top:9px; transform:translateX(-50%);
+    height:44px; display:flex; align-items:center;
+  }
+  .ign__acciones{ margin-left:auto; gap:0; }
+  .ign__icono{ width:36px; height:36px; }
+  .ign__int{ padding:0 12px; }
+}
+/* en pantallas muy angostas el logo y los iconos se rozan: la cuenta sale de la
+   barra (sigue en el cajon) antes que achicar la marca */
+@media (max-width:374px){
+  .ign__acciones a[aria-label="Mi cuenta"]{ display:none; }
+}
+
+/* Credito del autor: discreto, al final del pie. En el telefono se le deja
+   aire por debajo para que el boton flotante de WhatsApp no lo tape. */
+.ig-credito{ margin-top:24px; padding-top:18px; border-top:1px solid #1B2230;
+  font-size:12px; line-height:1.5; color:#7E8CA0; }
+.ig-credito a{ color:#A3B2C6; text-decoration:none; border-bottom:1px solid #3B4A5E; }
+.ig-credito a:hover{ color:#EDF2F8; border-bottom-color:#6EA2FF; }
+@media (max-width:760px){ .ig-credito{ padding-bottom:86px; } }
+</style>
+<style>
+html{ scroll-behavior:smooth; background:#F1F3F6; }
+html:has([data-tema="oscuro"]){ background:#141C27; }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+body{ margin:0; }
+#ig-raiz:empty{ min-height:100vh; }
+
+</style>
+</head>
+<body>
+<div id="ig-raiz"></div>
+<template id="ig-plantilla">
+<div data-tema="{{tema}}" style="position: relative; display: flex; flex-direction: column; background: #F1F3F6; color: #101318; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.5">
+
+<header class="ign" id="ignHeader">
+
+  <!-- Nivel 1: barra informativa (se repliega al hacer scroll) -->
+  <div class="ign__avisos">
+    <div class="ign__avisosInt">
+      <span>Envíos a toda Colombia</span>
+      <span class="ign__punto" aria-hidden="true"></span>
+      <span>Garantía por escrito</span>
+      <span class="ign__punto" aria-hidden="true"></span>
+      <span>IMEI verificado antes de pagar</span>
+    </div>
+  </div>
+
+  <!-- Nivel 2: logo, buscador, cuenta y carrito -->
+  <div class="ign__principal">
+    <div class="ign__int">
+
+      <button class="ign__hamburguesa" type="button" id="ignHam" aria-expanded="false" aria-controls="ignPanel" aria-label="Abrir menú">
+        <span class="ign__hamLinea"></span>
+        <span class="ign__hamLinea"></span>
+        <span class="ign__hamLinea"></span>
+      </button>
+
+      <a class="ign__logo" href="Main.dc.html" aria-label="Infinity Glass, inicio">
+        <img class="ign__logoImg" src="assets/914e09bbee632f47b29defceb7204137.webp" alt="Infinity Glass">
+      </a>
+
+      <form class="ign__buscador" role="search" action="Tienda.dc.html" method="get">
+        <svg class="ign__lupa" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path>
+        </svg>
+        <label class="ign__oculto" for="ignQ">Buscar productos</label>
+        <input class="ign__input" id="ignQ" name="q" type="search" autocomplete="off" placeholder="Buscar iPhone 18, iPhone 17, 256 GB...">
+        <button class="ign__buscarBtn" type="submit">Buscar</button>
+      </form>
+
+      <div class="ign__acciones">
+        <button class="ign__icono ign__tema" type="button" onClick="{{cambiarTema}}" aria-pressed="{{temaOscuro}}" aria-label="{{temaLabel}}" title="{{temaLabel}}">
+          <sc-if value="{{temaClaro}}" hint-placeholder-val="{{ true }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.3A8.6 8.6 0 1 1 9.7 3.5a6.9 6.9 0 0 0 10.8 10.8z"></path></svg></sc-if>
+          <sc-if value="{{temaOscuro}}" hint-placeholder-val="{{ false }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.6v2.2M12 19.2v2.2M4.2 12H2M22 12h-2.2M6.1 6.1 4.6 4.6M19.4 19.4l-1.5-1.5M17.9 6.1l1.5-1.5M4.6 19.4l1.5-1.5"></path></svg></sc-if>
+        </button>
+        <a class="ign__icono" href="Main.dc.html" aria-label="Mi cuenta">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.6"></circle><path d="M4.8 20c.6-3.8 3.6-5.8 7.2-5.8s6.6 2 7.2 5.8"></path>
+          </svg>
+        </a>
+        <a class="ign__icono ign__carrito" href="Carrito.dc.html" aria-label="Carrito, 2 productos">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5.5 7.5h13l-1.2 10.2a1.6 1.6 0 0 1-1.6 1.4H8.3a1.6 1.6 0 0 1-1.6-1.4z"></path>
+            <path d="M9 7.5V6a3 3 0 0 1 6 0v1.5"></path>
+          </svg>
+          <span class="ign__globo">2</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Nivel 3: categorias -->
+  <nav class="ign__cats" id="ignCats" aria-label="Categorías">
+    <div class="ign__int ign__int--cats">
+
+      <ul class="ign__lista">
+        <li class="ign__item">
+          <button class="ign__disp" type="button" aria-expanded="false" aria-controls="ignM1">
+            iPhone <span class="ign__flecha" aria-hidden="true"></span>
+          </button>
+          <div class="ign__menu ign__menu--ancho" id="ignM1">
+            <div class="ign__cols">
+              <div class="ign__col">
+                <p class="ign__colTit">Por estado</p>
+                <a href="Tienda.dc.html">Nuevos sellados</a>
+                <a href="Tienda.dc.html">Open box</a>
+                <a href="Tienda.dc.html">Usados grado A</a>
+              </div>
+              <div class="ign__col">
+                <p class="ign__colTit">Por modelo</p>
+                <a href="Tienda.dc.html">iPhone 18</a>
+                <a href="Tienda.dc.html">iPhone 17</a>
+                <a href="Tienda.dc.html">iPhone 16</a>
+              </div>
+              <div class="ign__col">
+                <p class="ign__colTit">&nbsp;</p>
+                <a href="Tienda.dc.html">iPhone 15</a>
+                <a href="Tienda.dc.html">iPhone 14</a>
+                <a href="Tienda.dc.html">iPhone 13</a>
+              </div>
+              <a class="ign__destaque" href="Tienda.dc.html">
+                <span class="ign__destaqueTit">Ver todos los iPhone</span>
+                <span class="ign__destaqueTxt">Cada unidad con su IMEI, sus fotos y su reporte de estado.</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="ign__item">
+          <button class="ign__disp" type="button" aria-expanded="false" aria-controls="ignM2">
+            Mac y iPad <span class="ign__flecha" aria-hidden="true"></span>
+          </button>
+          <div class="ign__menu" id="ignM2">
+            <div class="ign__col">
+              <a href="Tienda.dc.html">MacBook</a>
+              <a href="Tienda.dc.html">iMac y Mac mini</a>
+              <a href="Tienda.dc.html">iPad</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="ign__item"><a class="ign__enlace" href="Tienda.dc.html">Apple Watch</a></li>
+
+        <li class="ign__item">
+          <button class="ign__disp" type="button" aria-expanded="false" aria-controls="ignM3">
+            Accesorios <span class="ign__flecha" aria-hidden="true"></span>
+          </button>
+          <div class="ign__menu" id="ignM3">
+            <div class="ign__col">
+              <a href="Accesorios.dc.html">Cargadores y cables</a>
+              <a href="Accesorios.dc.html">Fundas y protección</a>
+              <a href="Accesorios.dc.html">Audio y AirPods</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="ign__item">
+          <button class="ign__disp" type="button" aria-expanded="false" aria-controls="ignM4">
+            Repuestos <span class="ign__flecha" aria-hidden="true"></span>
+          </button>
+          <div class="ign__menu" id="ignM4">
+            <div class="ign__col">
+              <a href="Tienda.dc.html">Pantallas</a>
+              <a href="Tienda.dc.html">Baterías</a>
+              <a href="Tienda.dc.html">Cámaras</a>
+              <a href="Tienda.dc.html">Flex y conectores</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="ign__item"><a class="ign__enlace ign__enlace--of" href="Tienda.dc.html">Ofertas</a></li>
+      </ul>
+
+      <ul class="ign__lista ign__lista--servicio">
+        <li><a class="ign__enlace" href="Nosotros.dc.html" aria-current="page">Nosotros</a></li>
+        <li><a class="ign__enlace" href="Main.dc.html#como-comprar">Cómo comprar</a></li>
+        <li><a class="ign__enlace" href="Main.dc.html#vende-tu-iphone">Vende tu iPhone</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- Panel movil -->
+  <div class="ign__velo" id="ignVelo"></div>
+
+  <div class="ign__panel" id="ignPanel" aria-label="Menú">
+    <div class="ign__panelCab">
+      <span class="ign__panelTit">MENÚ</span>
+      <button class="ign__cerrar" type="button" id="ignCerrar" aria-label="Cerrar menú">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="ign__panelInt">
+      <button class="ign__acc" type="button" aria-expanded="false">iPhone <span class="ign__flecha" aria-hidden="true"></span></button>
+      <div class="ign__accCuerpo">
+        <a href="Tienda.dc.html">Nuevos sellados</a>
+        <a href="Tienda.dc.html">Open box</a>
+        <a href="Tienda.dc.html">Usados grado A</a>
+        <a href="Tienda.dc.html">Ver todos los iPhone</a>
+      </div>
+      <button class="ign__acc" type="button" aria-expanded="false">Mac y iPad <span class="ign__flecha" aria-hidden="true"></span></button>
+      <div class="ign__accCuerpo">
+        <a href="Tienda.dc.html">MacBook</a>
+        <a href="Tienda.dc.html">iMac y Mac mini</a>
+        <a href="Tienda.dc.html">iPad</a>
+      </div>
+      <a class="ign__panelEnlace" href="Tienda.dc.html">Apple Watch</a>
+      <button class="ign__acc" type="button" aria-expanded="false">Accesorios <span class="ign__flecha" aria-hidden="true"></span></button>
+      <div class="ign__accCuerpo">
+        <a href="Accesorios.dc.html">Cargadores y cables</a>
+        <a href="Accesorios.dc.html">Fundas y protección</a>
+        <a href="Accesorios.dc.html">Audio y AirPods</a>
+      </div>
+      <button class="ign__acc" type="button" aria-expanded="false">Repuestos <span class="ign__flecha" aria-hidden="true"></span></button>
+      <div class="ign__accCuerpo">
+        <a href="Tienda.dc.html">Pantallas</a>
+        <a href="Tienda.dc.html">Baterías</a>
+        <a href="Tienda.dc.html">Cámaras</a>
+        <a href="Tienda.dc.html">Flex y conectores</a>
+      </div>
+      <a class="ign__panelEnlace" href="Tienda.dc.html">Ofertas</a>
+      <a class="ign__panelEnlace" href="Nosotros.dc.html" aria-current="page">Nosotros</a>
+      <a class="ign__panelEnlace" href="Main.dc.html#como-comprar">Cómo comprar</a>
+      <a class="ign__panelEnlace" href="Main.dc.html#vende-tu-iphone">Vende tu iPhone</a>
+    </div>
+  </div>
+
+
+  <!-- Carrito previo -->
+  <aside class="ign__mini" id="ignMini" aria-label="Carrito">
+    <div class="ign__miniCab">
+      <span class="ign__miniTit" data-mini-conteo="">Tu carrito (2)</span>
+      <button class="ign__miniCerrar" type="button" id="ignMiniCerrar" aria-label="Cerrar carrito">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="ign__miniCuerpo">
+      <div class="ign__miniEnvio">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none">
+          <path d="M2.8 6.6h11.4v9.2H2.8zM14.2 9.8h3.6l3.4 3.4v2.6h-7"></path>
+          <circle cx="6.6" cy="17.8" r="1.7"></circle><circle cx="17" cy="17.8" r="1.7"></circle>
+        </svg>
+        Tienes envío gratis
+      </div>
+
+      <div class="ign__miniItem">
+        <span class="ign__miniFoto">
+          <img src="assets/7a14c29dcda3ac440a4e620002d054a8.webp" alt="iPhone 15 Pro" style="max-width:84%; max-height:84%; object-fit:contain; display:block">
+        </span>
+        <div style="min-width:0">
+          <div class="ign__miniNom">iPhone 15 Pro 128 GB</div>
+          <div class="ign__miniSub">Open box · Batería 100%</div>
+          <div class="ign__miniLinea">
+            <span class="ign__miniSub">Unidad única</span>
+            <span class="ign__miniPrecio">$ 2.899.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ign__miniItem">
+        <span class="ign__miniFoto" style="border:1px dashed #C7CEDA">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94A1B3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="6.6" y="2.4" width="10.8" height="19.2" rx="2.4"></rect><path d="M10.6 5.2h2.8"></path>
+          </svg>
+        </span>
+        <div style="min-width:0">
+          <div class="ign__miniNom">Cargador 20W original</div>
+          <div class="ign__miniSub">USB-C · Nuevo sellado</div>
+          <div class="ign__miniLinea">
+            <span class="ign__paso">
+              <button class="ign__pasoBtn" type="button" data-mini="-" aria-label="Quitar uno">–</button>
+              <span class="ign__pasoNum" data-mini-cant="">1</span>
+              <button class="ign__pasoBtn" type="button" data-mini="+" aria-label="Agregar uno">+</button>
+            </span>
+            <span class="ign__miniPrecio" data-mini-linea="">$ 149.000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ign__miniPie">
+      <div class="ign__miniTotal">
+        <span style="font-size:15px; font-weight:700; color:var(--ign-texto)">Subtotal</span>
+        <span data-mini-subtotal="" style="font-size:22px; font-weight:800; letter-spacing:-0.01em; color:var(--ign-texto)">$ 3.048.000</span>
+      </div>
+      <div data-mini-transf="" style="font-size:13px; color:var(--ign-azul); font-weight:700; margin-top:-4px">$ 2.943.000 pagando con transferencia</div>
+      <a class="ign__miniBtn" href="Main.dc.html">Finalizar compra</a>
+      <a class="ign__miniBtn2" href="Carrito.dc.html">Ver carrito</a>
+      <div style="font-size:12px; color:var(--ign-suave); text-align:center; line-height:1.45">
+        El pago se completa en el checkout de Tiendanube.
+      </div>
+    </div>
+  </aside>
+
+</header>
+
+
+<div style="background: #080B10; color: #F5F7FA">
+<div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 56px 32px 64px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 40px">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<span style="display: inline-flex; align-self: flex-start; align-items: center; gap: 7px; padding: 6px 13px; border-radius: 999px; background: rgba(8,72,255,0.18); color: #00C8FF; font-size: 11px; font-weight: 800; letter-spacing: 0.07em">INFINITY GLASS S.A.S.</span>
+<h1 style="margin: 0; font-size: 42px; line-height: 1.12; font-weight: 800; letter-spacing: -0.025em">Vendemos iPhones usados sin que tengas que creernos</h1>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #94A1B3; max-width: 560px">Comprar un equipo de tres millones por internet da miedo, y con razón. Por eso montamos la tienda al revés: primero te mostramos el IMEI, la batería y el equipo encendido; el pago viene después.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 6px">
+<a class="cta" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+13+%2315-61%2C+Bogot%C3%A1" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 54px; padding: 0 24px; border-radius: 12px; background: #0848FF; color: #FFFFFF; font-size: 16px; font-weight: 700; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 2.6l9.4 9.4-9.4 9.4-9.4-9.4z"></path><path d="M9.4 13.6v-2.2a2 2 0 0 1 2-2h3.6"></path><path d="M13.4 7.6l1.8 1.8-1.8 1.8"></path></svg>Cómo llegar al local</a>
+<a href="Tienda.dc.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 54px; padding: 0 24px; border-radius: 12px; background: transparent; border: 1px solid #303744; color: #F5F7FA; font-size: 16px; font-weight: 700; text-decoration: none">Ver los equipos</a>
+</div>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 13px; align-items: flex-start; background: #0F141C; border: 1px solid #242C3A; border-radius: 14px; padding: 16px 18px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00C8FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 2.8l7.4 3v6.1c0 4.1-3 7.7-7.4 9.3-4.4-1.6-7.4-5.2-7.4-9.3V5.8z"></path><path d="M8.8 12l2.2 2.2 4.2-4.4"></path></svg><div style="min-width: 0"><div style="font-size: 15px; font-weight: 700; color: #F5F7FA">NIT 901.845.112-7</div>
+<div style="font-size: 13.5px; color: #94A1B3; line-height: 1.45; padding-top: 3px">Empresa registrada, con factura electrónica a tu nombre.</div></div></div>
+<div style="display: flex; gap: 13px; align-items: flex-start; background: #0F141C; border: 1px solid #242C3A; border-radius: 14px; padding: 16px 18px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00C8FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3.2 8.6h3.1L8 6.1h8l1.7 2.5h3.1v9.8H3.2z"></path><circle cx="12" cy="13.2" r="3.3"></circle></svg><div style="min-width: 0"><div style="font-size: 15px; font-weight: 700; color: #F5F7FA">Video de cada entrega</div>
+<div style="font-size: 13.5px; color: #94A1B3; line-height: 1.45; padding-top: 3px">Grabamos el equipo encendido y el IMEI antes de despachar.</div></div></div>
+<div style="display: flex; gap: 13px; align-items: flex-start; background: #0F141C; border: 1px solid #242C3A; border-radius: 14px; padding: 16px 18px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00C8FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg><div style="min-width: 0"><div style="font-size: 15px; font-weight: 700; color: #F5F7FA">Tienda con dirección</div>
+<div style="font-size: 13.5px; color: #94A1B3; line-height: 1.45; padding-top: 3px">Puedes venir, probarlo y pagar en el local.</div></div></div>
+</div>
+</div>
+</div>
+
+<div style="background: #F1F3F6">
+<div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 48px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 200px; min-width: 0; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 20px; padding: 22px 24px">
+<div style="font-size: 30px; font-weight: 800; letter-spacing: -0.02em; color: #0848FF">3 meses</div>
+<div style="font-size: 14.5px; line-height: 1.5; color: #5F6E84; padding-top: 6px">de garantía por escrito en todos los equipos</div>
+</div>
+<div style="flex: 1 1 200px; min-width: 0; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 20px; padding: 22px 24px">
+<div style="font-size: 30px; font-weight: 800; letter-spacing: -0.02em; color: #0848FF">100%</div>
+<div style="font-size: 14.5px; line-height: 1.5; color: #5F6E84; padding-top: 6px">de las unidades usadas se publican con su IMEI</div>
+</div>
+<div style="flex: 1 1 200px; min-width: 0; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 20px; padding: 22px 24px">
+<div style="font-size: 30px; font-weight: 800; letter-spacing: -0.02em; color: #0848FF">+1.800</div>
+<div style="font-size: 14.5px; line-height: 1.5; color: #5F6E84; padding-top: 6px">equipos entregados</div>
+</div>
+<div style="flex: 1 1 200px; min-width: 0; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 20px; padding: 22px 24px">
+<div style="font-size: 30px; font-weight: 800; letter-spacing: -0.02em; color: #0848FF">6 años</div>
+<div style="font-size: 14.5px; line-height: 1.5; color: #5F6E84; padding-top: 6px">en el mercado</div>
+</div>
+</div>
+</div>
+
+<div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 56px 32px 20px; box-sizing: border-box">
+<h2 style="margin: 0; font-size: 32px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em">Qué le hacemos a cada equipo antes de publicarlo</h2>
+<p style="margin: 8px 0 0; font-size: 16px; color: #5F6E84; max-width: 680px">Ninguna unidad entra al catálogo sin pasar por aquí. Por eso cada publicación tiene su propio IMEI y sus propias fotos.</p>
+</div>
+<div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 24px 32px 56px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 240px; min-width: 0; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 20px; padding: 24px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="flex: none; width: 42px; height: 42px; border-radius: 12px; background: #E6EDFF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0848FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="11" cy="11" r="6.4"></circle><path d="M16 16l4.4 4.4"></path></svg></span>
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 0.08em; color: #94A1B3">PASO 1</span>
+</div>
+<div style="font-size: 18px; font-weight: 800; letter-spacing: -0.01em; padding: 14px 0 6px">Verificamos el IMEI</div>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #5F6E84">Consultamos que no esté reportado ni bloqueado por operador, y que no tenga iCloud activo del dueño anterior.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 20px; padding: 24px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="flex: none; width: 42px; height: 42px; border-radius: 12px; background: #E6EDFF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0848FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="2.6" y="7.4" width="16.4" height="9.2" rx="2.4"></rect><path d="M21.4 10.6v2.8"></path><path d="M5.6 10.4h6v3.2h-6z"></path></svg></span>
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 0.08em; color: #94A1B3">PASO 2</span>
+</div>
+<div style="font-size: 18px; font-weight: 800; letter-spacing: -0.01em; padding: 14px 0 6px">Medimos la batería</div>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #5F6E84">Anotamos la salud real y los ciclos de carga. Si no llega al 80%, no entra al catálogo.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 20px; padding: 24px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="flex: none; width: 42px; height: 42px; border-radius: 12px; background: #E6EDFF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0848FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 2.8l7.4 3v6.1c0 4.1-3 7.7-7.4 9.3-4.4-1.6-7.4-5.2-7.4-9.3V5.8z"></path><path d="M8.8 12l2.2 2.2 4.2-4.4"></path></svg></span>
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 0.08em; color: #94A1B3">PASO 3</span>
+</div>
+<div style="font-size: 18px; font-weight: 800; letter-spacing: -0.01em; padding: 14px 0 6px">Probamos todo</div>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #5F6E84">Pantalla, las tres cámaras, Face ID, altavoces, botones, carga y señal. Uno por uno.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 20px; padding: 24px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="flex: none; width: 42px; height: 42px; border-radius: 12px; background: #E6EDFF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0848FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3.2 8.6h3.1L8 6.1h8l1.7 2.5h3.1v9.8H3.2z"></path><circle cx="12" cy="13.2" r="3.3"></circle></svg></span>
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 0.08em; color: #94A1B3">PASO 4</span>
+</div>
+<div style="font-size: 18px; font-weight: 800; letter-spacing: -0.01em; padding: 14px 0 6px">Fotos de esa unidad</div>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #5F6E84">Nada de fotos de catálogo: las que ves en el anuncio son del equipo que te vamos a entregar.</p>
+</div>
+</div>
+
+<div style="background: #F1F3F6">
+<div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 56px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 44px">
+<div style="flex: 1 1 420px; min-width: 0">
+<a class="ig-mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+13+%2315-61%2C+Bogot%C3%A1" target="_blank" rel="noopener" style="position: relative; display: block; border-radius: 22px; overflow: hidden; background: #FFFFFF; border: 1px solid #E0E4EB; text-decoration: none">
+<div style="aspect-ratio: 4 / 3; position: relative; overflow: hidden">
+<svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="display: block">
+<rect width="400" height="300" fill="#E9EEF4"></rect>
+<g fill="#DEE4ED"><rect x="18" y="16" width="104" height="72" rx="3"></rect><rect x="150" y="16" width="118" height="72" rx="3"></rect><rect x="296" y="16" width="92" height="72" rx="3"></rect><rect x="18" y="120" width="104" height="60" rx="3"></rect><rect x="296" y="120" width="92" height="60" rx="3"></rect><rect x="18" y="212" width="104" height="72" rx="3"></rect><rect x="150" y="212" width="118" height="72" rx="3"></rect><rect x="296" y="212" width="92" height="72" rx="3"></rect></g>
+<rect x="150" y="120" width="118" height="60" rx="3" fill="#D7E6DC"></rect>
+<g stroke="#FFFFFF" stroke-linecap="square" fill="none"><path d="M136 0V300M282 0V300" stroke-width="13"></path><path d="M0 104H400M0 196H400" stroke-width="13"></path><path d="M0 46H400" stroke-width="7" opacity=".85"></path><path d="M0 254H400" stroke-width="7" opacity=".85"></path><path d="M60 0V300M350 0V300" stroke-width="7" opacity=".85"></path></g>
+<path d="M-20 300L140 96L420 40" stroke="#F6D98B" stroke-width="11" fill="none" opacity=".9"></path>
+<circle cx="209" cy="150" r="34" fill="#0848FF" opacity=".12"></circle>
+<g transform="translate(209 150)"><path d="M0 21c0 0 13-10.5 13-20.5A13 13 0 1 0-13 .5C-13 10.5 0 21 0 21z" fill="#0848FF"></path><circle cy="0.5" r="4.6" fill="#FFFFFF"></circle></g>
+</svg>
+<span style="position: absolute; top: 14px; left: 14px; padding: 5px 10px; border-radius: 7px; background: rgba(255,255,255,0.92); color: #5F6E84; font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em">VISTA DE EJEMPLO</span>
+</div>
+<span style="position: absolute; left: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 8px; padding: 9px 15px; border-radius: 999px; background: #0848FF; color: #FFFFFF; font-size: 13.5px; font-weight: 700"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 2.6l9.4 9.4-9.4 9.4-9.4-9.4z"></path><path d="M9.4 13.6v-2.2a2 2 0 0 1 2-2h3.6"></path><path d="M13.4 7.6l1.8 1.8-1.8 1.8"></path></svg>Abrir en Google Maps</span>
+</a>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 30px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em">El local</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #5F6E84">Puedes venir sin cita. Si compraste por la web, el retiro no tiene costo y revisas el equipo antes de llevártelo.</p>
+<div style="display: flex; gap: 11px; align-items: flex-start; font-size: 15px; line-height: 1.5"><span style="padding-top:2px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0848FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg></span><span><strong style="font-weight: 700">Calle 13 #15-61, Bogotá</strong><br><span style="color: #5F6E84">Barrio Ricaurte · a una cuadra de la estación Ricaurte</span></span></div>
+<div style="display: flex; gap: 11px; align-items: flex-start; font-size: 15px; line-height: 1.5"><span style="padding-top:2px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0848FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="12" cy="12" r="8.6"></circle><path d="M12 7.2V12l3.2 2"></path></svg></span><span><strong style="font-weight: 700">Lunes a sábado, 9:00 a 19:00</strong><br><span style="color: #5F6E84">Domingos y festivos, cerrado</span></span></div>
+<div style="display: flex; gap: 11px; align-items: flex-start; font-size: 15px; line-height: 1.5"><span style="padding-top:2px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0848FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M21 11.8a8.6 8.6 0 0 1-12.6 7.6L3 21l2-5.2A8.6 8.6 0 1 1 21 11.8z"></path></svg></span><span><strong style="font-weight: 700">+57 310 482 9517</strong><br><span style="color: #5F6E84">Avísanos y te tenemos el equipo listo</span></span></div>
+</div>
+</div>
+</div>
+
+<div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 56px 32px 20px; box-sizing: border-box">
+<h2 style="margin: 0; font-size: 32px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em">Quién te atiende</h2>
+<p style="margin: 8px 0 0; font-size: 16px; color: #5F6E84; max-width: 620px">Somos pocos y damos la cara. El mismo que te responde por WhatsApp es el que revisa tu equipo.</p>
+</div>
+<div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 24px 32px 64px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 240px; min-width: 0; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 20px; overflow: hidden">
+<div style="aspect-ratio: 4 / 3; background: linear-gradient(160deg, #F7F9FC 0%, #EDF1F7 100%); border-bottom: 1px solid #E0E4EB; display: flex; align-items: center; justify-content: center">
+<div aria-hidden="true" style="width: 92px; height: 92px; border-radius: 50%; background: #E6EDFF; color: #0848FF; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 800; letter-spacing: 0.02em">AR</div>
+</div>
+<div style="padding: 18px 20px 20px">
+<div style="font-size: 16px; font-weight: 800; color: #101318">Andrés Rincón</div>
+<div style="font-size: 14px; color: #5F6E84; padding-top: 4px">Revisión técnica</div>
+</div>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 20px; overflow: hidden">
+<div style="aspect-ratio: 4 / 3; background: linear-gradient(160deg, #F7F9FC 0%, #EDF1F7 100%); border-bottom: 1px solid #E0E4EB; display: flex; align-items: center; justify-content: center">
+<div aria-hidden="true" style="width: 92px; height: 92px; border-radius: 50%; background: #E2F3E9; color: #0F7A41; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 800; letter-spacing: 0.02em">LM</div>
+</div>
+<div style="padding: 18px 20px 20px">
+<div style="font-size: 16px; font-weight: 800; color: #101318">Laura Medina</div>
+<div style="font-size: 14px; color: #5F6E84; padding-top: 4px">Ventas y WhatsApp</div>
+</div>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 20px; overflow: hidden">
+<div style="aspect-ratio: 4 / 3; background: linear-gradient(160deg, #F7F9FC 0%, #EDF1F7 100%); border-bottom: 1px solid #E0E4EB; display: flex; align-items: center; justify-content: center">
+<div aria-hidden="true" style="width: 92px; height: 92px; border-radius: 50%; background: #FDF0DC; color: #8A4B08; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 800; letter-spacing: 0.02em">JP</div>
+</div>
+<div style="padding: 18px 20px 20px">
+<div style="font-size: 16px; font-weight: 800; color: #101318">Jairo Peña</div>
+<div style="font-size: 14px; color: #5F6E84; padding-top: 4px">Entregas y despachos</div>
+</div>
+</div>
+</div>
+
+<div style="background: #080B10; color: #94A1B3">
+<div style="max-width: 1200px; margin: 0 auto; padding: 56px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 13px">
+<img src="assets/914e09bbee632f47b29defceb7204137.webp" alt="Infinity Glass" style="width: 210px; height: auto; display: block; margin-bottom: 2px">
+<div style="font-size: 13px; color: #7E8CA0; margin-bottom: 4px">Infinity Glass S.A.S. · NIT 901.845.112-7</div>
+<div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.45">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C8FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+<span>Calle 13 #15-61, Bogotá<br><span style="color: #7E8CA0">Barrio Ricaurte</span></span>
+</div>
+<div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.45">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C8FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M21 11.8a8.6 8.6 0 0 1-12.6 7.6L3 21l2-5.2A8.6 8.6 0 1 1 21 11.8z"></path></svg>
+<a href="Main.dc.html" style="color: #94A1B3; text-decoration: none"><span style="color: #F5F7FA; font-weight: 600">+57 310 482 9517</span><br><span style="color: #7E8CA0">WhatsApp y llamadas</span></a>
+</div>
+<div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.45">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C8FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><rect x="3" y="5.5" width="18" height="13" rx="2.2"></rect><path d="M3.6 6.6L12 13l8.4-6.4"></path></svg>
+<a href="Main.dc.html" style="color: #F5F7FA; text-decoration: none; font-weight: 600">hola@infinityglass.co</a>
+</div>
+<div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.45">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C8FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><circle cx="12" cy="12" r="8.6"></circle><path d="M12 7.2V12l3.2 2"></path></svg>
+<span>Lunes a sábado, 9:00 a 19:00<br><span style="color: #7E8CA0">Domingos y festivos, cerrado</span></span>
+</div>
+</div>
+<div style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<div style="font-weight: 700; color: #FFFFFF">Información</div>
+<a href="Nosotros.dc.html" style="color: inherit; text-decoration: none">Nosotros</a>
+<a href="Main.dc.html#como-comprar" style="color: inherit; text-decoration: none">Cómo comprar</a>
+<div>Garantía y devoluciones</div>
+<div>Verificación de IMEI</div>
+<div>Preguntas frecuentes</div>
+</div>
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px">
+<div style="font-weight: 700; color: #FFFFFF; font-size: 14px">Medios de pago</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="4.8" width="18" height="15.4" rx="2.2"></rect><path d="M3 9.4h18M8.2 3v3.4M15.8 3v3.4"></path></svg>Addi</div>
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3.4 9.6L12 4.8l8.6 4.8"></path><path d="M5.4 10.6v7M9.8 10.6v7M14.2 10.6v7M18.6 10.6v7"></path><path d="M3.4 19.4h17.2"></path></svg>PSE</div>
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="7" y="2.8" width="10" height="18.4" rx="2.2"></rect><path d="M10.4 5.6h3.2"></path></svg>Nequi</div>
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="2.6" y="5.6" width="18.8" height="12.8" rx="2.2"></rect><path d="M2.6 9.8h18.8"></path></svg>Visa</div>
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="2.6" y="5.6" width="18.8" height="12.8" rx="2.2"></rect><path d="M2.6 9.8h18.8"></path></svg>Mastercard</div>
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3.4 9.4h14.2l-3.2-3.2"></path><path d="M20.6 14.6H6.4l3.2 3.2"></path></svg>Transferencia</div>
+</div>
+<div style="font-weight: 700; color: #FFFFFF; font-size: 14px; padding-top: 6px">Envíos</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M2.8 6.6h11.4v9.2H2.8zM14.2 9.8h3.6l3.4 3.4v2.6h-7"></path><circle cx="6.6" cy="17.8" r="1.7"></circle><circle cx="17" cy="17.8" r="1.7"></circle></svg>Coordinadora</div>
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3.6 9.6h16.8v9.8H3.6zM3.6 9.6L5.4 4.8h13.2l1.8 4.8"></path><path d="M12 9.6v9.8"></path></svg>Retiro en tienda</div>
+</div>
+</div>
+</div>
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 32px 112px; box-sizing: border-box">
+<div style="border-top: 1px solid #303744; padding-top: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px">
+<div>
+<div style="font-size: 15px; font-weight: 700; color: #FFFFFF">Síguenos</div>
+<div style="font-size: 13px">Publicamos cada entrega, con el IMEI en cámara.</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="social" href="Main.dc.html" aria-label="TikTok de Infinity Glass" style="display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #303744; color: #F5F7FA; font-size: 14px; font-weight: 600; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.2 17.6V5.9l9.4-1.9v11.6"></path><ellipse cx="6.7" cy="17.8" rx="2.5" ry="2.2"></ellipse><ellipse cx="16.1" cy="15.8" rx="2.5" ry="2.2"></ellipse></svg>
+TikTok</a>
+<a class="social" href="Main.dc.html" aria-label="Facebook de Infinity Glass" style="display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #303744; color: #F5F7FA; font-size: 14px; font-weight: 600; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12.1c0 3.9-3.8 7.1-8.5 7.1a10 10 0 0 1-2.4-.3L4.6 20.8l1.3-3.4a6.7 6.7 0 0 1-2.4-5.3C3.5 8.2 7.3 5 12 5s8.5 3.2 8.5 7.1z"></path></svg>
+Facebook</a>
+<a class="social" href="Main.dc.html" aria-label="Instagram de Infinity Glass" style="display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #303744; color: #F5F7FA; font-size: 14px; font-weight: 600; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 8.6h3.1L8 6.1h8l1.7 2.5h3.1v9.8H3.2z"></path><circle cx="12" cy="13.2" r="3.3"></circle></svg>
+Instagram</a>
+</div>
+</div>
+<div class="ig-credito">Diseñado y desarrollado por <a href="https://daniandre18.github.io/portfolio/" target="_blank" rel="noopener">daniandre18</a></div>
+</div>
+</div>
+
+<a class="wa" href="Main.dc.html" aria-label="Pedir ayuda por WhatsApp" style="position: fixed; right: 28px; bottom: 28px; z-index: 40; display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 22px; border-radius: 999px; background: #0F7A41; color: #FFFFFF; font-size: 15px; font-weight: 700; text-decoration: none; box-shadow: 0 6px 24px rgba(0,0,0,0.35)">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.8a8.6 8.6 0 0 1-12.6 7.6L3 21l2-5.2A8.6 8.6 0 1 1 21 11.8z"></path><path d="M8.9 9.2c.3 1.9 2 3.6 3.9 3.9l1-1.2 1.9.9-.3 1.6c-2.9.5-6.3-2.9-5.8-5.8l1.6-.3.9 1.9z"></path></svg>
+¿Necesitas ayuda?</a>
+
+</div>
+
+
+</template>
+<script src="motor.js"></script>
+<script>
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { oscuro: false,};
+      this.navbar();
+  }
+
+  navbar() {
+    if (typeof window === 'undefined' || window.igNav) return;
+    var listo = function () {
+      if (!document.getElementById('ignHeader')) return setTimeout(listo, 120);
+      var header = document.getElementById('ignHeader');
+        if (!header || header.dataset.ignListo) return;
+        header.dataset.ignListo = '1';
+
+        var ham    = document.getElementById('ignHam');
+        var panel  = document.getElementById('ignPanel');
+        var items  = Array.prototype.slice.call(header.querySelectorAll('.ign__item'));
+        var finoPuntero = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+        var limpieza = [];                        // para poder soltar todo despues
+
+        function escuchar(obj, evt, fn, op) {
+          obj.addEventListener(evt, fn, op);
+          limpieza.push(function () { obj.removeEventListener(evt, fn, op); });
+        }
+
+        /* ---------- Sticky: clase 'scrolled' pasados los 50 px ---------- */
+        var pendiente = false, puesta = false;
+        function revisar() {
+          pendiente = false;
+          /* Banda muerta de 24 a 64 px. Tiene que ser mas ancha que la barra de
+             avisos (30 px): al replegarse mueve el contenido y el navegador
+             corrige el scroll, y con un umbral unico eso reabria la barra. */
+          var y = window.scrollY;
+          var debe = puesta ? (y > 24) : (y > 64);
+          if (debe !== puesta) { puesta = debe; header.classList.toggle('scrolled', debe); }
+        }
+        function alScroll() { if (!pendiente) { pendiente = true; requestAnimationFrame(revisar); } }
+        escuchar(window, 'scroll', alScroll, { passive: true });
+        revisar();
+
+        /* ---------- Desplegables de escritorio ---------- */
+        function abrir(li, si) {
+          li.classList.toggle('abierto', si);
+          var b = li.querySelector('.ign__disp');
+          if (b) b.setAttribute('aria-expanded', si ? 'true' : 'false');
+        }
+        function cerrarTodos(menos) {
+          items.forEach(function (li) { if (li !== menos) abrir(li, false); });
+        }
+
+        items.forEach(function (li) {
+          var btn = li.querySelector('.ign__disp');
+          if (!btn) return;
+
+          escuchar(btn, 'click', function (e) {
+            e.preventDefault();
+            /* Con mouse el menu ya lo abrio el hover: si el clic tambien alternara,
+               lo cerraria de inmediato. e.detail === 0 distingue Enter/Espacio. */
+            var teclado = e.detail === 0;
+            if (finoPuntero && !teclado) return;
+            var ya = li.classList.contains('abierto');
+            cerrarTodos(li);
+            abrir(li, !ya);
+          });
+
+          if (finoPuntero) {
+            var cerrar;
+            escuchar(li, 'mouseenter', function () { clearTimeout(cerrar); cerrarTodos(li); abrir(li, true); });
+            escuchar(li, 'mouseleave', function () { cerrar = setTimeout(function () { abrir(li, false); }, 140); });
+            limpieza.push(function () { clearTimeout(cerrar); });
+          }
+
+          /* Al salir del ultimo enlace con Tab, se cierra. */
+          escuchar(li, 'focusout', function (e) {
+            if (!li.contains(e.relatedTarget)) abrir(li, false);
+          });
+        });
+
+        escuchar(document, 'keydown', function (e) {
+          if (e.key !== 'Escape') return;
+          var abierto = header.querySelector('.ign__item.abierto');
+          if (abierto) { abrir(abierto, false); var b = abierto.querySelector('.ign__disp'); if (b) b.focus(); }
+          if (panelAbierto()) cerrarPanel();
+          if (miniAbierto()) cerrarMini();
+        });
+
+        escuchar(document, 'click', function (e) {
+          if (!header.contains(e.target)) { cerrarTodos(null); cerrarPanel(); }
+        });
+
+        /* ---------- Cajon movil ---------- */
+        var velo = document.getElementById('ignVelo');
+        var cerrarBtn = document.getElementById('ignCerrar');
+        function panelAbierto() { return !!panel && panel.classList.contains('abierto'); }
+        function moverPanel(si) {
+          if (!panel) return;
+          panel.classList.toggle('abierto', si);
+          if (velo) velo.classList.toggle('abierto', si);
+          if (ham) {
+            ham.setAttribute('aria-expanded', si ? 'true' : 'false');
+            ham.setAttribute('aria-label', si ? 'Cerrar menú' : 'Abrir menú');
+          }
+          /* el fondo no se mueve mientras el cajon esta abierto */
+          document.body.style.overflow = si ? 'hidden' : '';
+          if (si && cerrarBtn) cerrarBtn.focus();
+          else if (!si && ham) ham.focus();
+        }
+        function cerrarPanel() { if (panelAbierto()) moverPanel(false); }
+        if (ham && panel) {
+          escuchar(ham, 'click', function () { moverPanel(!panelAbierto()); });
+          if (velo) escuchar(velo, 'click', cerrarPanel);
+          if (cerrarBtn) escuchar(cerrarBtn, 'click', cerrarPanel);
+          /* al elegir una categoria el cajon se cierra solo */
+          Array.prototype.forEach.call(panel.querySelectorAll('a'), function (a) {
+            escuchar(a, 'click', cerrarPanel);
+          });
+          Array.prototype.forEach.call(panel.querySelectorAll('.ign__acc'), function (b) {
+            escuchar(b, 'click', function () {
+              var cuerpo = b.nextElementSibling;
+              var abre = !cuerpo.classList.contains('abierto');
+              cuerpo.classList.toggle('abierto', abre);
+              b.setAttribute('aria-expanded', abre ? 'true' : 'false');
+            });
+          });
+        }
+
+                /* ---------- Carrito previo ---------- */
+        var mini = document.getElementById('ignMini');
+        var miniCerrar = document.getElementById('ignMiniCerrar');
+        var iconoCarrito = header.querySelector('.ign__carrito');
+        function miniAbierto() { return !!mini && mini.classList.contains('abierto'); }
+        function verMini(si) {
+          if (!mini) return;
+          if (si && panelAbierto()) moverPanel(false);   /* uno u otro, nunca los dos */
+          mini.classList.toggle('abierto', si);
+          if (velo) velo.classList.toggle('abierto', si);
+          document.body.style.overflow = si ? 'hidden' : '';
+          if (si && miniCerrar) miniCerrar.focus();
+          else if (!si && iconoCarrito) iconoCarrito.focus();
+        }
+        function cerrarMini() { if (miniAbierto()) verMini(false); }
+        if (mini && iconoCarrito) {
+          escuchar(iconoCarrito, 'click', function (e) {
+            e.preventDefault();          /* el href queda como respaldo si no hay JS */
+            verMini(!miniAbierto());
+          });
+          if (miniCerrar) escuchar(miniCerrar, 'click', cerrarMini);
+          if (velo) escuchar(velo, 'click', cerrarMini);
+        }
+        /* cantidades del carrito previo: el equipo es unidad unica, el accesorio no */
+        (function () {
+          if (!mini) return;
+          var EQ = 2899000, EQT = 2799000, CA = 149000, CAT = 144000, n = 1;
+          var cop = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 });
+          function money(v) { return cop.format(v).replace(/\u00a0/g, ' '); }
+          var cant   = mini.querySelector('[data-mini-cant]');
+          var linea  = mini.querySelector('[data-mini-linea]');
+          var sub    = mini.querySelector('[data-mini-subtotal]');
+          var transf = mini.querySelector('[data-mini-transf]');
+          var cuenta = mini.querySelector('[data-mini-conteo]');
+          var menos  = mini.querySelector('[data-mini="-"]');
+          if (!cant) return;
+          function pintar() {
+            cant.textContent = n;
+            if (linea)  linea.textContent  = money(CA * n);
+            if (sub)    sub.textContent    = money(EQ + CA * n);
+            if (transf) transf.textContent = money(EQT + CAT * n) + ' pagando con transferencia';
+            if (cuenta) cuenta.textContent = 'Tu carrito (' + (1 + n) + ')';
+            if (menos)  menos.disabled = n <= 1;
+          }
+          Array.prototype.forEach.call(mini.querySelectorAll('[data-mini]'), function (b) {
+            escuchar(b, 'click', function () {
+              n = Math.max(1, Math.min(5, n + (b.getAttribute('data-mini') === '+' ? 1 : -1)));
+              pintar();
+            });
+          });
+          pintar();
+        })();
+
+        /* El tema puede re-renderizar: asi se sueltan todos los listeners. */
+        window.igNav = {
+          /* Lo usa la animacion de agregar al carrito: cuando el producto
+             aterriza en el icono, el panel se abre con el resumen. */
+          verCarrito: function (si) { verMini(si !== false); },
+          destruir: function () {
+            limpieza.forEach(function (f) { f(); });
+            limpieza = [];
+            document.body.style.overflow = '';
+            delete header.dataset.ignListo;
+          }
+        };
+    };
+    listo();
+  }
+  renderVals() {
+    // Tema: el atributo viaja en el contenedor raiz y la hoja de estilos hace el resto.
+    // claro por defecto; el boton de la cabecera enciende el modo oscuro
+    const oscuro = !!this.state.oscuro;
+    return {
+      tema: oscuro ? 'oscuro' : 'claro',
+      temaOscuro: oscuro,
+      temaClaro: !oscuro,
+      temaLabel: oscuro ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro',
+      cambiarTema: () => this.setState({ oscuro: !oscuro }),
+      pagos: [{ label: 'Addi' }, { label: 'PSE' }, { label: 'Nequi' },
+              { label: 'Visa' }, { label: 'Mastercard' }, { label: 'Transferencia' }]
+    };
+  }
+}
+
+window.__igArrancar(Component, ["navbar"]);
+</script>
+</body>
+</html>

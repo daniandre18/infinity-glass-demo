@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha de producto en móvil · Infinity Glass</title>
+<meta name="description" content="Versión móvil de la ficha de producto.">
+<meta name="theme-color" content="#0848FF">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ficha de producto en móvil · Infinity Glass">
+<meta property="og:description" content="Versión móvil de la ficha de producto.">
+<meta property="og:image" content="assets/914e09bbee632f47b29defceb7204137.webp">
+<link rel="icon" href="assets/914e09bbee632f47b29defceb7204137.webp">
+<style>
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-800-normal.woff2') format('woff2')}
+</style>
+<style>
+body{margin:0}
+a{color:#0848FF}a:hover{color:#087CFF}
+.social{transition:border-color .15s ease}
+.social:hover{border-color:#00C8FF}
+
+/* Las tiras horizontales enganchan al soltar el dedo. */
+.ig-desliza{ scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+.ig-desliza::-webkit-scrollbar{ display:none; }
+.pm-tabs{ scrollbar-width:none; }
+.pm-tabs::-webkit-scrollbar{ display:none; }
+.ig-desliza > *{ scroll-snap-align:start; }
+
+/* Los enlaces de servicio saltan a su seccion del home. El margen de anclaje
+   descuenta la cabecera pegajosa (143 px en escritorio, 88 en telefono) para
+   que el titular no quede escondido debajo. */
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } }
+
+/* ---------- Modo oscuro ----------
+   El color vive en el atributo style de cada elemento (asi lo edita el panel),
+   de modo que el tema se cambia POR VALOR. Cada regla se escribe en las cuatro
+   formas en que el navegador o el editor pueden serializar ese color (con
+   espacio y sin el, en hex y en rgb) para que el tema no dependa de como quede
+   escrito el atributo. Contrastes sobre la tarjeta #1D2834: titulo 13,3:1 ·
+   texto 6,9:1 · azul 5,9:1 · blanco sobre boton azul 6,2:1. */
+button.ign__icono{ border:0; background:transparent; padding:0; font:inherit; cursor:pointer; }
+[data-tema] { transition:background-color .25s ease, color .25s ease; }
+
+[data-tema="oscuro"]{ background:#141C27 !important; color:#EDF2F8 !important; min-height:100%; }
+html:has([data-tema="oscuro"]), body:has([data-tema="oscuro"]){ background:#141C27; }
+
+/* superficies */[data-tema="oscuro"] [style*="background: #FFFFFF" i],
+[data-tema="oscuro"] [style*="background:#FFFFFF" i],
+[data-tema="oscuro"] [style*="background: rgb(255, 255, 255)" i],
+[data-tema="oscuro"] [style*="background:rgb(255, 255, 255)" i]{ background:#1D2834 !important; }
+[data-tema="oscuro"] [style*="background-color: #FFFFFF" i],
+[data-tema="oscuro"] [style*="background-color:#FFFFFF" i],
+[data-tema="oscuro"] [style*="background-color: rgb(255, 255, 255)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(255, 255, 255)" i]{ background-color:#1D2834 !important; }
+[data-tema="oscuro"] [style*="background: #F1F3F6" i],
+[data-tema="oscuro"] [style*="background:#F1F3F6" i],
+[data-tema="oscuro"] [style*="background: rgb(241, 243, 246)" i],
+[data-tema="oscuro"] [style*="background:rgb(241, 243, 246)" i]{ background:#141C27 !important; }
+[data-tema="oscuro"] [style*="background-color: #F1F3F6" i],
+[data-tema="oscuro"] [style*="background-color:#F1F3F6" i],
+[data-tema="oscuro"] [style*="background-color: rgb(241, 243, 246)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(241, 243, 246)" i]{ background-color:#141C27 !important; }
+[data-tema="oscuro"] [style*="background: #F1F5F9" i],
+[data-tema="oscuro"] [style*="background:#F1F5F9" i],
+[data-tema="oscuro"] [style*="background: rgb(241, 245, 249)" i],
+[data-tema="oscuro"] [style*="background:rgb(241, 245, 249)" i]{ background:#232F3D !important; }
+[data-tema="oscuro"] [style*="background-color: #F1F5F9" i],
+[data-tema="oscuro"] [style*="background-color:#F1F5F9" i],
+[data-tema="oscuro"] [style*="background-color: rgb(241, 245, 249)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(241, 245, 249)" i]{ background-color:#232F3D !important; }
+[data-tema="oscuro"] [style*="background: #F7F9FC" i],
+[data-tema="oscuro"] [style*="background:#F7F9FC" i],
+[data-tema="oscuro"] [style*="background: rgb(247, 249, 252)" i],
+[data-tema="oscuro"] [style*="background:rgb(247, 249, 252)" i]{ background:#232F3D !important; }
+[data-tema="oscuro"] [style*="background-color: #F7F9FC" i],
+[data-tema="oscuro"] [style*="background-color:#F7F9FC" i],
+[data-tema="oscuro"] [style*="background-color: rgb(247, 249, 252)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(247, 249, 252)" i]{ background-color:#232F3D !important; }
+[data-tema="oscuro"] [style*="background: #EDF1F7" i],
+[data-tema="oscuro"] [style*="background:#EDF1F7" i],
+[data-tema="oscuro"] [style*="background: rgb(237, 241, 247)" i],
+[data-tema="oscuro"] [style*="background:rgb(237, 241, 247)" i]{ background:#232F3D !important; }
+[data-tema="oscuro"] [style*="background-color: #EDF1F7" i],
+[data-tema="oscuro"] [style*="background-color:#EDF1F7" i],
+[data-tema="oscuro"] [style*="background-color: rgb(237, 241, 247)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(237, 241, 247)" i]{ background-color:#232F3D !important; }
+[data-tema="oscuro"] [style*="background: #E9EFF7" i],
+[data-tema="oscuro"] [style*="background:#E9EFF7" i],
+[data-tema="oscuro"] [style*="background: rgb(233, 239, 247)" i],
+[data-tema="oscuro"] [style*="background:rgb(233, 239, 247)" i]{ background:#2B394A !important; }
+[data-tema="oscuro"] [style*="background-color: #E9EFF7" i],
+[data-tema="oscuro"] [style*="background-color:#E9EFF7" i],
+[data-tema="oscuro"] [style*="background-color: rgb(233, 239, 247)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(233, 239, 247)" i]{ background-color:#2B394A !important; }
+[data-tema="oscuro"] [style*="background: #E0E4EB" i],
+[data-tema="oscuro"] [style*="background:#E0E4EB" i],
+[data-tema="oscuro"] [style*="background: rgb(224, 228, 235)" i],
+[data-tema="oscuro"] [style*="background:rgb(224, 228, 235)" i]{ background:#2E3A4A !important; }
+[data-tema="oscuro"] [style*="background-color: #E0E4EB" i],
+[data-tema="oscuro"] [style*="background-color:#E0E4EB" i],
+[data-tema="oscuro"] [style*="background-color: rgb(224, 228, 235)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(224, 228, 235)" i]{ background-color:#2E3A4A !important; }
+[data-tema="oscuro"] [style*="background: #E6EDFF" i],
+[data-tema="oscuro"] [style*="background:#E6EDFF" i],
+[data-tema="oscuro"] [style*="background: rgb(230, 237, 255)" i],
+[data-tema="oscuro"] [style*="background:rgb(230, 237, 255)" i]{ background:#16284D !important; }
+[data-tema="oscuro"] [style*="background-color: #E6EDFF" i],
+[data-tema="oscuro"] [style*="background-color:#E6EDFF" i],
+[data-tema="oscuro"] [style*="background-color: rgb(230, 237, 255)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(230, 237, 255)" i]{ background-color:#16284D !important; }
+[data-tema="oscuro"] [style*="background: #E8F6EE" i],
+[data-tema="oscuro"] [style*="background:#E8F6EE" i],
+[data-tema="oscuro"] [style*="background: rgb(232, 246, 238)" i],
+[data-tema="oscuro"] [style*="background:rgb(232, 246, 238)" i]{ background:#12301F !important; }
+[data-tema="oscuro"] [style*="background-color: #E8F6EE" i],
+[data-tema="oscuro"] [style*="background-color:#E8F6EE" i],
+[data-tema="oscuro"] [style*="background-color: rgb(232, 246, 238)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(232, 246, 238)" i]{ background-color:#12301F !important; }
+[data-tema="oscuro"] [style*="background: #E3F4EC" i],
+[data-tema="oscuro"] [style*="background:#E3F4EC" i],
+[data-tema="oscuro"] [style*="background: rgb(227, 244, 236)" i],
+[data-tema="oscuro"] [style*="background:rgb(227, 244, 236)" i]{ background:#12301F !important; }
+[data-tema="oscuro"] [style*="background-color: #E3F4EC" i],
+[data-tema="oscuro"] [style*="background-color:#E3F4EC" i],
+[data-tema="oscuro"] [style*="background-color: rgb(227, 244, 236)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(227, 244, 236)" i]{ background-color:#12301F !important; }
+[data-tema="oscuro"] [style*="background: #E2F3E9" i],
+[data-tema="oscuro"] [style*="background:#E2F3E9" i],
+[data-tema="oscuro"] [style*="background: rgb(226, 243, 233)" i],
+[data-tema="oscuro"] [style*="background:rgb(226, 243, 233)" i]{ background:#12301F !important; }
+[data-tema="oscuro"] [style*="background-color: #E2F3E9" i],
+[data-tema="oscuro"] [style*="background-color:#E2F3E9" i],
+[data-tema="oscuro"] [style*="background-color: rgb(226, 243, 233)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(226, 243, 233)" i]{ background-color:#12301F !important; }
+[data-tema="oscuro"] [style*="background: #FDF0DC" i],
+[data-tema="oscuro"] [style*="background:#FDF0DC" i],
+[data-tema="oscuro"] [style*="background: rgb(253, 240, 220)" i],
+[data-tema="oscuro"] [style*="background:rgb(253, 240, 220)" i]{ background:#3A2A12 !important; }
+[data-tema="oscuro"] [style*="background-color: #FDF0DC" i],
+[data-tema="oscuro"] [style*="background-color:#FDF0DC" i],
+[data-tema="oscuro"] [style*="background-color: rgb(253, 240, 220)" i],
+[data-tema="oscuro"] [style*="background-color:rgb(253, 240, 220)" i]{ background-color:#3A2A12 !important; }
+/* texto */[data-tema="oscuro"] [style*="color: #101318" i],
+[data-tema="oscuro"] [style*="color:#101318" i],
+[data-tema="oscuro"] [style*="color: rgb(16, 19, 24)" i],
+[data-tema="oscuro"] [style*="color:rgb(16, 19, 24)" i]{ color:#EDF2F8 !important; }
+[data-tema="oscuro"] [style*="color: #5F6E84" i],
+[data-tema="oscuro"] [style*="color:#5F6E84" i],
+[data-tema="oscuro"] [style*="color: rgb(95, 110, 132)" i],
+[data-tema="oscuro"] [style*="color:rgb(95, 110, 132)" i]{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] [style*="color: #64748B" i],
+[data-tema="oscuro"] [style*="color:#64748B" i],
+[data-tema="oscuro"] [style*="color: rgb(100, 116, 139)" i],
+[data-tema="oscuro"] [style*="color:rgb(100, 116, 139)" i]{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] [style*="color: #7E8CA0" i],
+[data-tema="oscuro"] [style*="color:#7E8CA0" i],
+[data-tema="oscuro"] [style*="color: rgb(126, 140, 160)" i],
+[data-tema="oscuro"] [style*="color:rgb(126, 140, 160)" i]{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] [style*="color: #087CFF" i],
+[data-tema="oscuro"] [style*="color:#087CFF" i],
+[data-tema="oscuro"] [style*="color: rgb(8, 124, 255)" i],
+[data-tema="oscuro"] [style*="color:rgb(8, 124, 255)" i]{ color:#6EA2FF !important; }
+[data-tema="oscuro"] [style*="color: #0B5C39" i],
+[data-tema="oscuro"] [style*="color:#0B5C39" i],
+[data-tema="oscuro"] [style*="color: rgb(11, 92, 57)" i],
+[data-tema="oscuro"] [style*="color:rgb(11, 92, 57)" i]{ color:#6FD39B !important; }
+[data-tema="oscuro"] [style*="color: #0F7A41" i],
+[data-tema="oscuro"] [style*="color:#0F7A41" i],
+[data-tema="oscuro"] [style*="color: rgb(15, 122, 65)" i],
+[data-tema="oscuro"] [style*="color:rgb(15, 122, 65)" i]{ color:#6FD39B !important; }
+[data-tema="oscuro"] [style*="color: #0F6B3C" i],
+[data-tema="oscuro"] [style*="color:#0F6B3C" i],
+[data-tema="oscuro"] [style*="color: rgb(15, 107, 60)" i],
+[data-tema="oscuro"] [style*="color:rgb(15, 107, 60)" i]{ color:#6FD39B !important; }
+[data-tema="oscuro"] [style*="color: #2F6B4C" i],
+[data-tema="oscuro"] [style*="color:#2F6B4C" i],
+[data-tema="oscuro"] [style*="color: rgb(47, 107, 76)" i],
+[data-tema="oscuro"] [style*="color:rgb(47, 107, 76)" i]{ color:#6FD39B !important; }
+[data-tema="oscuro"] [style*="color: #8A4B08" i],
+[data-tema="oscuro"] [style*="color:#8A4B08" i],
+[data-tema="oscuro"] [style*="color: rgb(138, 75, 8)" i],
+[data-tema="oscuro"] [style*="color:rgb(138, 75, 8)" i]{ color:#E8B468 !important; }
+/* el azul de marca sube de tono como texto, pero no cuando es fondo de boton */[data-tema="oscuro"] [style*="color: #0848FF" i]:not([style*="background-color: #0848FF" i]):not([style*="background: #0848FF" i]):not([style*="background-color: rgb(8, 72, 255)" i]):not([style*="background: rgb(8, 72, 255)" i]),
+[data-tema="oscuro"] [style*="color:#0848FF" i]:not([style*="background-color: #0848FF" i]):not([style*="background: #0848FF" i]):not([style*="background-color: rgb(8, 72, 255)" i]):not([style*="background: rgb(8, 72, 255)" i]),
+[data-tema="oscuro"] [style*="color: rgb(8, 72, 255)" i]:not([style*="background-color: #0848FF" i]):not([style*="background: #0848FF" i]):not([style*="background-color: rgb(8, 72, 255)" i]):not([style*="background: rgb(8, 72, 255)" i]),
+[data-tema="oscuro"] [style*="color:rgb(8, 72, 255)" i]:not([style*="background-color: #0848FF" i]):not([style*="background: #0848FF" i]):not([style*="background-color: rgb(8, 72, 255)" i]):not([style*="background: rgb(8, 72, 255)" i]){ color:#6EA2FF !important; }
+/* bordes: el color puede venir en cualquier propiedad de borde */[data-tema="oscuro"] [style*="#E0E4EB" i],
+[data-tema="oscuro"] [style*="rgb(224, 228, 235)" i]{ border-color:#2E3A4A !important; }
+[data-tema="oscuro"] [style*="#C7CEDA" i],
+[data-tema="oscuro"] [style*="rgb(199, 206, 218)" i]{ border-color:#3B4A5E !important; }
+
+
+/* ---------- Lo que no vive en el atributo style ----------
+   Clases, degradados, controles de formulario (el navegador los pinta blancos
+   por su cuenta) y paneles que estan ocultos en reposo. */
+[data-tema="oscuro"] input:not([type="range"]), [data-tema="oscuro"] select, [data-tema="oscuro"] textarea{
+  background:#232F3D !important; color:#EDF2F8 !important; border-color:#2E3A4A !important;
+}
+[data-tema="oscuro"] input::placeholder, [data-tema="oscuro"] textarea::placeholder{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] input[type="checkbox"], [data-tema="oscuro"] input[type="range"]{ accent-color:#6EA2FF; }
+[data-tema="oscuro"] input[type="range"]{ background:transparent !important; }
+[data-tema="oscuro"] input[type="range"]::-webkit-slider-runnable-track{ background:#2E3A4A !important; }
+[data-tema="oscuro"] input[type="range"]::-moz-range-track{ background:#2E3A4A !important; }
+
+[data-tema="oscuro"] a:not([class]){ color:#6EA2FF; }
+[data-tema="oscuro"] a:not([class]):hover{ color:#9DBDFF; }
+[data-tema="oscuro"] .tile{ background:#232F3D !important; }
+[data-tema="oscuro"] .tile:hover, [data-tema="oscuro"] .tile:focus-visible{ background:#2B394A !important; }
+[data-tema="oscuro"] .rango .pista{ background:#2E3A4A !important; }
+[data-tema="oscuro"] .ign__miniEnvio{ background:#12301F !important; color:#6FD39B !important; }
+[data-tema="oscuro"] .ign__panel, [data-tema="oscuro"] .ign__mini{ background:#1D2834 !important; }
+[data-tema="oscuro"] .ign__pasoBtn, [data-tema="oscuro"] .ign__miniBtn2{ background:#232F3D !important; color:#EDF2F8 !important; }
+[data-tema="oscuro"] .ign__pasoBtn[disabled]:hover{ background:#232F3D !important; }
+[data-tema="oscuro"] .pf-abrir, [data-tema="oscuro"] .pf-limpiar, [data-tema="oscuro"] .pf-pie,
+[data-tema="oscuro"] .pf-panel, [data-tema="oscuro"] .pf-cab, [data-tema="oscuro"] .pf-cuerpo{
+  background:#1D2834 !important; color:#EDF2F8 !important;
+}
+[data-tema="oscuro"] .pf-cerrar{ background:#232F3D !important; color:#EDF2F8 !important; }
+[data-tema="oscuro"] [style*="radial-gradient(88% 96% at 50% 104%"]{
+  background:radial-gradient(88% 96% at 50% 104%, #14402A 0%, #12301F 38%, rgba(18,48,31,0) 82%), #141C27 !important;
+}
+/* la pastilla sobre el mapa dibujado sigue siendo clara: su tinta no se toca */
+[data-tema="oscuro"] [style*="rgba(255,255,255,0.92)"]{ color:#5F6E84 !important; }
+
+/* la cabecera, el cajon y el carrito previo salen de variables: se redefinen */
+[data-tema="oscuro"] .ign{ --ign-blanco:#1D2834; --ign-gris:#232F3D; --ign-texto:#EDF2F8; --ign-borde:#2E3A4A; }
+[data-tema="oscuro"] .ign .ign__principal, [data-tema="oscuro"] .ign .ign__cats,
+[data-tema="oscuro"] .ign.scrolled .ign__principal, [data-tema="oscuro"] .ign.scrolled .ign__cats{
+  background:rgba(16,22,31,.96) !important; border-top-color:#232F3D !important;
+}
+[data-tema="oscuro"] .ign .ign__logoTexto, [data-tema="oscuro"] .ign .ign__icono,
+[data-tema="oscuro"] .ign .ign__disp, [data-tema="oscuro"] .ign .ign__enlace,
+[data-tema="oscuro"] .ign.scrolled .ign__logoTexto, [data-tema="oscuro"] .ign.scrolled .ign__icono,
+[data-tema="oscuro"] .ign.scrolled .ign__disp, [data-tema="oscuro"] .ign.scrolled .ign__enlace{ color:#F5F7FA !important; }
+[data-tema="oscuro"] .ign .ign__enlace--of{ color:#6EA2FF !important; }
+[data-tema="oscuro"] .ign .ign__buscador{ background:#232F3D !important; border-color:#2E3A4A !important; }
+[data-tema="oscuro"] .ign .ign__input{ color:#F5F7FA !important; }
+[data-tema="oscuro"] .ign .ign__input::placeholder{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] .ign .ign__lupa{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] .ign .ign__hamLinea{ background:#F5F7FA !important; }
+[data-tema="oscuro"] .ign .ign__icono:hover{ background:rgba(255,255,255,.08) !important; }
+
+/* la tira de anuncios y el pie ya eran oscuros: se quedan como estan */
+[data-tema="oscuro"] [style*="color: #2F6B4C"]{ color:#6FD39B !important; }
+[data-tema="oscuro"] a:not([class]){ color:#6EA2FF; }
+[data-tema="oscuro"] .tile{ background:#232F3D !important; }
+
+/* esta maqueta no trae la hoja del navbar grande: la etiqueta del campo
+   tiene que esconderse igual, pero seguir existiendo para quien no ve */
+.ign__oculto{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+
+
+/* el buscador de movil en modo oscuro */
+[data-tema="oscuro"] .ign__buscaCaja{ background:#1D2834 !important; }
+[data-tema="oscuro"] .ign__buscaForm{ background:#232F3D !important; border-color:#2E3A4A !important; }
+[data-tema="oscuro"] .ign__buscaInput{ color:#EDF2F8 !important; }
+[data-tema="oscuro"] .ign__buscaInput::placeholder{ color:#A3B2C6 !important; }
+[data-tema="oscuro"] .ign__buscaCerrar{ color:#EDF2F8 !important; }
+[data-tema="oscuro"] .ign__buscaSug a{ background:#232F3D !important; border-color:#2E3A4A !important; color:#EDF2F8 !important; }
+[data-tema="oscuro"] .ign__buscaSug span{ color:#A3B2C6 !important; }
+
+/* ---------- Buscador en el telefono ----------
+   Entre el logo y los iconos el campo queda espichado, asi que bajo 760 px cae
+   a su propia fila, a lo ancho y con el boton Buscar al lado. Sin capas ni
+   clics previos: se ve y se escribe. */
+@media (max-width:760px){
+  .ign__principal .ign__int{
+    flex-wrap:wrap; height:auto;
+    padding-top:9px; padding-bottom:10px; row-gap:9px;
+  }
+  .ign__buscador{ order:5; flex:1 0 100%; height:46px; padding:0 14px; }
+  .ign__input{ font-size:16px; }          /* menos de 16 y iOS hace zoom al enfocar */
+  .ign__buscarBtn{ display:inline-flex; height:34px; padding:0 15px; font-size:14px; }
+}
+
+/* Credito del autor: discreto, al final del pie. En el telefono se le deja
+   aire por debajo para que el boton flotante de WhatsApp no lo tape. */
+.ig-credito{ margin-top:24px; padding-top:18px; border-top:1px solid #1B2230;
+  font-size:12px; line-height:1.5; color:#7E8CA0; }
+.ig-credito a{ color:#A3B2C6; text-decoration:none; border-bottom:1px solid #3B4A5E; }
+.ig-credito a:hover{ color:#EDF2F8; border-bottom-color:#6EA2FF; }
+@media (max-width:760px){ .ig-credito{ padding-bottom:86px; } }
+</style>
+<style>
+html{ scroll-behavior:smooth; background:#F1F3F6; }
+html:has([data-tema="oscuro"]){ background:#141C27; }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+body{ margin:0; }
+#ig-raiz:empty{ min-height:100vh; }
+
+/* El artboard movil mide 390 px fijos: en el sitio se centra como una
+   maqueta de telefono para que se pueda ver desde el computador. */
+#ig-raiz > div{ width:100% !important; max-width:430px; margin:0 auto; min-height:0 !important;
+  box-shadow:0 0 0 1px rgba(16,19,24,.08); }
+body{ background:#E7EAF0; }
+
+</style>
+</head>
+<body>
+<div id="ig-raiz"></div>
+<template id="ig-plantilla">
+<div data-tema="{{tema}}" style="width: 390px; min-height: 2800px; box-sizing: border-box; display: flex; flex-direction: column; background: #FFFFFF; color: #101318; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.5">
+
+<div style="background: #0848FF; color: #FFFFFF; font-size: 12px; font-weight: 600; text-align: center; padding: 8px 12px">IMEI verificado antes de pagar · Garantía por escrito</div>
+
+
+
+<div style="display: flex; align-items: center; justify-content: space-between; height: 58px; padding: 0 12px; background: #080B10; border-bottom: 1px solid #303744; box-sizing: border-box">
+<button aria-label="Menú" style="width: 44px; height: 44px; border: 0; background: transparent; padding: 0; display: flex; align-items: center; justify-content: center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F5F7FA" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+</button>
+<img src="assets/914e09bbee632f47b29defceb7204137.webp" alt="Infinity Glass" style="height: 34px; width: auto; display: block">
+<div style="display: flex">
+<button type="button" onClick="{{cambiarTema}}" aria-pressed="{{temaOscuro}}" aria-label="{{temaLabel}}" style="width: 44px; height: 44px; border: 0; background: transparent; padding: 0; display: flex; align-items: center; justify-content: center; color: #F5F7FA; cursor: pointer">
+<sc-if value="{{temaClaro}}" hint-placeholder-val="{{ true }}"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.3A8.6 8.6 0 1 1 9.7 3.5a6.9 6.9 0 0 0 10.8 10.8z"></path></svg></sc-if>
+<sc-if value="{{temaOscuro}}" hint-placeholder-val="{{ false }}"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.6v2.2M12 19.2v2.2M4.2 12H2M22 12h-2.2M6.1 6.1 4.6 4.6M19.4 19.4l-1.5-1.5M17.9 6.1l1.5-1.5M4.6 19.4l1.5-1.5"></path></svg></sc-if>
+</button>
+<a data-carrito="" href="#comprar" aria-label="Carrito" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #F5F7FA">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.2 11H6.2z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg>
+</a>
+</div>
+</div>
+<form role="search" action="Tienda.dc.html" method="get" style="display: flex; align-items: center; gap: 8px; padding: 0 12px 10px; background: #080B10; border-bottom: 1px solid #303744">
+<div style="flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 9px; height: 44px; padding: 0 13px; box-sizing: border-box; border-radius: 12px; background: rgba(255,255,255,0.07); border: 1px solid #303744">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8795A8" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex: none"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<label class="ign__oculto" for="pmQ">Buscar productos</label>
+<input id="pmQ" name="q" type="search" autocomplete="off" placeholder="Buscar iPhone, accesorios..." style="flex: 1 1 auto; min-width: 0; border: 0; background: none; outline: none; font-family: inherit; font-size: 16px; color: #F5F7FA">
+</div>
+<button type="submit" style="flex: none; height: 44px; padding: 0 16px; border: 0; border-radius: 12px; background: #0848FF; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer">Buscar</button>
+</form>
+<div style="padding: 12px 16px 0; font-size: 12px; color: #5F6E84">Inicio / Open box / <span style="color: #101318; font-weight: 600">iPhone 15 Pro</span></div>
+
+<div class="pm-visor" style="position: relative; background: #F1F5F9; margin: 12px 0 0; display: flex; flex-direction: column; align-items: center; padding: 50px 0 78px; box-sizing: border-box">
+<sc-if value="{{is360}}" hint-placeholder-val="{{ true }}">
+<div style="position: absolute; z-index: 2; top: 12px; left: 12px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; font-size: 12px; font-weight: 700">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0848FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"></path><path d="M21 4v5h-5"></path></svg>
+Arrastra para girar
+</div>
+<div style="position: absolute; z-index: 2; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; font-size: 12px; font-weight: 600; color: #5F6E84">{{angleLabel}}</div>
+</sc-if>
+<div style="width: 190px; height: 350px; perspective: 900px; display: flex; align-items: center; justify-content: center">
+<div style="position: relative; width: 172px; height: 350px; transform-style: preserve-3d; transform: rotateY({{rot}}deg)">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 30px; background: #080B10; border: 3px solid #3B4A5F; box-sizing: border-box; transform: translateZ(6px); backface-visibility: hidden">
+<div style="position: absolute; top: 8px; left: 8px; right: 8px; bottom: 8px; border-radius: 21px; background: #111827; display: flex; align-items: center; justify-content: center; text-align: center; padding: 14px; box-sizing: border-box; color: #94A1B3; font-size: 12px; font-weight: 600">FOTO REAL · FRENTE</div>
+<div style="position: absolute; top: 15px; left: 50%; margin-left: -24px; width: 48px; height: 14px; border-radius: 9px; background: #080B10"></div>
+</div>
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 30px; background: #3B4A5F; transform: rotateY(180deg) translateZ(6px); backface-visibility: hidden">
+<div style="position: absolute; top: 14px; left: 14px; width: 72px; height: 72px; border-radius: 20px; background: rgba(14,17,22,0.22)">
+<div style="position: absolute; top: 8px; left: 8px; width: 24px; height: 24px; border-radius: 50%; background: #080B10; border: 2px solid rgba(255,255,255,0.3); box-sizing: border-box"></div>
+<div style="position: absolute; top: 8px; left: 40px; width: 24px; height: 24px; border-radius: 50%; background: #080B10; border: 2px solid rgba(255,255,255,0.3); box-sizing: border-box"></div>
+<div style="position: absolute; top: 40px; left: 24px; width: 24px; height: 24px; border-radius: 50%; background: #080B10; border: 2px solid rgba(255,255,255,0.3); box-sizing: border-box"></div>
+</div>
+</div>
+<div style="position: absolute; top: 22px; bottom: 22px; left: 80px; width: 12px; background: #3B4A5F; transform: rotateY(-90deg) translateZ(86px)"></div>
+<div style="position: absolute; top: 22px; bottom: 22px; left: 80px; width: 12px; background: #3B4A5F; transform: rotateY(90deg) translateZ(86px)"></div>
+</div>
+</div>
+<div style="width: 140px; height: 13px; border-radius: 50%; background: rgba(14,17,22,0.1); margin-top: 14px"></div>
+<sc-if value="{{is360}}" hint-placeholder-val="{{ true }}">
+<div style="position: absolute; bottom: 14px; left: 16px; right: 16px; display: flex; align-items: center; gap: 6px; padding: 6px 8px; box-sizing: border-box; border-radius: 999px; background: #FFFFFF">
+<button onClick="{{prev}}" aria-label="Girar a la izquierda" style="flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid #E0E4EB; background: #FFFFFF; padding: 0; display: flex; align-items: center; justify-content: center">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#101318" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+</button>
+<input type="range" min="0" max="359" value="{{angle}}" onChange="{{onAngle}}" aria-label="Girar el iPhone" style="flex: 1 1 auto; min-width: 0; height: 44px; accent-color: #0848FF">
+<button onClick="{{next}}" aria-label="Girar a la derecha" style="flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid #E0E4EB; background: #FFFFFF; padding: 0; display: flex; align-items: center; justify-content: center">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#101318" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+</button>
+</div>
+</sc-if>
+</div>
+
+<div class="ig-desliza" style="display: flex; gap: 8px; padding: 12px 16px; overflow-x: auto">
+<sc-for list="{{thumbs}}" as="t" hint-placeholder-count="6">
+<button onClick="{{ t.pick }}" aria-label="{{ t.alt }}" style="flex: none; width: 64px; height: 64px; border-radius: 10px; padding: 0; background: #F1F3F6; font-family: inherit; font-size: 11px; font-weight: 700; color: {{t.color}}; border: {{t.border}}">{{t.label}}</button>
+</sc-for>
+</div>
+
+<div id="comprar" style="padding: 8px 16px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 12px; color: #5F6E84; font-weight: 600">SKU IG-15P-128-TA-0417</div>
+
+<h1 style="margin: 0; font-size: 25px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em">iPhone 15 Pro 128 GB · Open box · Batería 100%</h1><span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 999px; background: #E6EDFF; color: #0848FF; font-size: 12px; font-weight: 700"><span style="width: 8px; height: 8px; border-radius: 50%; background: #15803D"></span>Última unidad disponible</span>
+<div>
+<div style="font-size: 14px; color: #5F6E84; text-decoration: line-through">$ 3.299.000</div>
+<div style="font-size: 34px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">$ 2.899.000</div>
+<div style="margin-top: 8px; padding: 10px 14px; border-radius: 10px; background: #E6EDFF; color: #0848FF; font-size: 14px; font-weight: 700">$ 2.799.000 con transferencia · ahorras $ 100.000</div>
+<div style="margin-top: 8px; font-size: 14px; color: #5F6E84">Hasta <strong style="color: #101318">12 cuotas de $ 241.583</strong> con Addi, sin tarjeta</div>
+</div>
+<div style="display: flex; align-items: center; gap: 12px">
+<div style="display: flex; align-items: center; border: 1px solid #E0E4EB; border-radius: 12px; overflow: hidden">
+<button aria-label="Quitar uno" style="width: 44px; height: 46px; border: 0; background: #FFFFFF; font-size: 20px">–</button>
+<div style="width: 44px; text-align: center; font-weight: 700">1</div>
+<button aria-label="Agregar uno" style="width: 44px; height: 46px; border: 0; background: #FFFFFF; font-size: 20px">+</button>
+</div>
+<div style="font-size: 13px; color: #5F6E84">Queda 1 en stock</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<a href="#comprar" style="display: flex; align-items: center; justify-content: center; min-height: 54px; border-radius: 10px; background: #0848FF; color: #FFFFFF; font-size: 16px; font-weight: 800; text-decoration: none">Comprar ahora</a>
+<a data-agregar="" href="#comprar" style="display: flex; align-items: center; justify-content: center; min-height: 50px; border-radius: 10px; background: #FFFFFF; border: 2px solid #101318; color: #101318; font-size: 15px; font-weight: 700; text-decoration: none">Agregar al carrito</a>
+<a href="#comprar" style="display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; border-radius: 10px; background: #FFFFFF; border: 1px solid #128C4B; color: #0F6B3C; font-size: 16px; font-weight: 700; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.8a8.6 8.6 0 0 1-12.6 7.6L3 21l2-5.2A8.6 8.6 0 1 1 21 11.8z"></path></svg>Consultar por WhatsApp</a>
+</div>
+</div>
+
+<div style="margin: 0 16px 20px; border: 1px solid #E0E4EB; border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 14px; font-weight: 700">Calcula el costo de envío</div>
+<div style="display: flex; gap: 8px">
+<label for="ciudadm" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Ciudad</label>
+<input id="ciudadm" type="text" placeholder="Tu ciudad" style="flex: 1 1 auto; min-width: 0; height: 44px; padding: 0 14px; box-sizing: border-box; border: 1px solid #E0E4EB; border-radius: 10px; font-family: inherit; font-size: 15px">
+<button style="flex: none; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 0; background: #080B10; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 700">Calcular</button>
+</div>
+<div style="font-size: 13px; color: #5F6E84">Coordinadora · 2 a 3 días hábiles · $ 18.000</div>
+<div style="font-size: 13px; color: #5F6E84">Retiro en Calle 13 #15-61, Bogotá · sin costo</div>
+</div>
+
+<div style="margin: 0 16px 20px; border: 1px solid #E0E4EB; border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 14px; font-weight: 700">Medios de pago</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{pays}}" as="m" hint-placeholder-count="6">
+<div style="height: 32px; min-width: 56px; padding: 0 10px; border-radius: 6px; border: 1px solid #E0E4EB; color: #5F6E84; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center">{{m.label}}</div>
+</sc-for>
+</div>
+<div style="font-size: 13px; color: #5F6E84">Para apartar la unidad con un abono, escríbenos por WhatsApp.</div>
+</div>
+
+<div style="margin: 0 16px 20px; background: #080B10; color: #FFFFFF; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 12px; font-weight: 700; color: #94A1B3">IMEI de esta unidad</div>
+<div style="font-size: 21px; font-weight: 800; letter-spacing: 0.04em; color: #00C8FF">35 684210 123456 0</div>
+<div style="font-size: 13px; color: #94A1B3">Consúltalo tú mismo en el portal de tu operador <strong style="color: #FFFFFF">antes de pagar</strong>. Si no coincide con el equipo que recibes, no lo aceptes.</div>
+<div style="margin-top: 4px; padding-top: 14px; border-top: 1px solid #262D38; display: flex; flex-direction: column; gap: 9px">
+<div style="display: flex; align-items: flex-start; gap: 9px; font-size: 13.5px; line-height: 1.4; color: #E7ECF3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DDC84" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l5 5 9-10"></path></svg><span>Libre de iCloud y de operador</span></div>
+<div style="display: flex; align-items: flex-start; gap: 9px; font-size: 13.5px; line-height: 1.4; color: #E7ECF3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DDC84" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l5 5 9-10"></path></svg><span>Factura electrónica a tu nombre</span></div>
+<div style="display: flex; align-items: flex-start; gap: 9px; font-size: 13.5px; line-height: 1.4; color: #E7ECF3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DDC84" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l5 5 9-10"></path></svg><span>Empaque e IMEI grabados al despachar</span></div>
+<div style="display: flex; align-items: flex-start; gap: 9px; font-size: 13.5px; line-height: 1.4; color: #E7ECF3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DDC84" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l5 5 9-10"></path></svg><span>Infinity Glass S.A.S. · NIT 901.845.112-7</span></div>
+</div>
+</div>
+
+<div style="background: #F1F3F6; padding: 22px 16px 24px; margin-bottom: 20px">
+<div class="pm-tabs" role="tablist" aria-label="Detalles del equipo" style="display: flex; flex-wrap: nowrap; gap: 20px; overflow-x: auto; border-bottom: 2px solid #E0E4EB; margin-bottom: 18px">
+<button onClick="{{t1.ir}}" role="tab" aria-selected="{{t1.activo}}" style="flex: none; padding: 0 2px 12px; border: 0; background: none; cursor: pointer; font-family: inherit; font-size: 15px; font-weight: 800; color: {{t1.color}}; border-bottom: {{t1.borde}}; margin-bottom: -2px">Estado del equipo</button>
+<button onClick="{{t2.ir}}" role="tab" aria-selected="{{t2.activo}}" style="flex: none; padding: 0 2px 12px; border: 0; background: none; cursor: pointer; font-family: inherit; font-size: 15px; font-weight: 800; color: {{t2.color}}; border-bottom: {{t2.borde}}; margin-bottom: -2px">Descripción del equipo</button>
+<button onClick="{{t3.ir}}" role="tab" aria-selected="{{t3.activo}}" style="flex: none; padding: 0 2px 12px; border: 0; background: none; cursor: pointer; font-family: inherit; font-size: 15px; font-weight: 800; color: {{t3.color}}; border-bottom: {{t3.borde}}; margin-bottom: -2px">Garantía y lo que incluye</button>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 16px; padding: 16px">
+<sc-if value="{{esTab1}}" hint-placeholder-val="{{ true }}">
+<div style="border: 1px solid #E0E4EB; border-radius: 12px; overflow: hidden">
+<sc-for list="{{report}}" as="r" hint-placeholder-count="7">
+<div style="display: flex; flex-wrap: wrap; gap: 4px 20px; padding: 13px 16px; background: {{r.bg}}">
+<div style="flex: 0 0 190px; font-size: 14px; font-weight: 700; color: #101318">{{r.k}}</div>
+<div style="flex: 1 1 240px; min-width: 0; font-size: 14px; color: #5F6E84">{{r.v}}</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{esTab2}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; max-width: 760px; color: #5F6E84; line-height: 1.7">iPhone 15 Pro de 128 GB en titanio azul. Open box: la caja se abrió para revisarlo, pero el equipo no se usó. Conserva la película original de fábrica y la batería marca 100%. Esta es la única unidad con este IMEI, y las fotos son de ella, no de catálogo.</p>
+</sc-if>
+<sc-if value="{{esTab3}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0 0 18px; max-width: 760px; color: #5F6E84; line-height: 1.7"><strong style="color: #101318">3 meses</strong> por fallas de funcionamiento interno: pantalla, batería, cámaras, altavoces, carga y conectividad. No cubre daño físico, humedad ni golpes posteriores a la entrega. El reclamo se hace por WhatsApp al +57 310 482 9517.</p>
+<div style="font-weight: 800; color: #101318; margin-bottom: 6px">Qué incluye</div>
+<p style="margin: 0; max-width: 760px; color: #5F6E84; line-height: 1.7">Equipo, cable USB-C a USB-C original y caja original con sus accesorios de papelería. No incluye cargador de pared: Apple dejó de incluirlo desde el iPhone 12.</p>
+</sc-if>
+</div>
+</div>
+
+<div style="margin: 0 16px 20px; position: relative; height: 420px; border-radius: 18px; background: #111827; display: flex; align-items: center; justify-content: center">
+<div style="width: 56px; height: 56px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="#101318" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></div>
+<div style="position: absolute; left: 12px; bottom: 12px; padding: 4px 10px; border-radius: 999px; background: #FFFFFF; font-size: 11px; font-weight: 700">VIDEO VERTICAL DE YOUTUBE</div>
+</div>
+
+<div style="padding: 4px 16px 110px">
+<h2 style="margin: 0 0 4px; font-size: 21px; line-height: 1.2; font-weight: 800; letter-spacing: -0.01em">También te puede interesar</h2>
+<p style="margin: 0 0 16px; font-size: 14px; color: #5F6E84">Otras unidades verificadas, con el mismo reporte de estado.</p>
+<div class="ig-desliza" style="display: flex; flex-wrap: nowrap; gap: 20px; overflow-x: auto; margin: 0 -16px; padding: 0 16px 6px; scroll-padding-left: 16px">
+<sc-for list="{{related}}" as="p" hint-placeholder-count="4">
+<div style="position: relative; flex: none; width: 269px; display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E0E4EB; border-radius: 18px; overflow: hidden">
+
+<button onClick="{{p.toggleFav}}" aria-label="{{p.favLabel}}" aria-pressed="{{p.fav}}" style="position: absolute; top: 12px; right: 12px; z-index: 2; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; color: {{p.favColor}}">
+<svg width="21" height="21" viewBox="0 0 24 24" fill="{{p.favFill}}" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3l-7.1-7a4.3 4.3 0 0 1 6.1-6.1l1 1 1-1a4.3 4.3 0 0 1 6.1 6.1z"></path></svg>
+</button>
+
+<a href="{{p.enlace}}" style="display: flex; flex-direction: column; flex: 1 1 auto; text-decoration: none; color: #101318">
+<div style="position: relative; height: 280px; display: flex; align-items: center; justify-content: center; padding: 56px 18px 12px; box-sizing: border-box">
+<span style="position: absolute; top: 12px; left: 12px; display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 999px; font-size: 12px; font-weight: 700; background: {{p.badgeBg}}; color: {{p.badgeColor}}">
+<sc-if value="{{p.icoSellado}}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 2.6l8.4 4.2v10L12 21l-8.4-4.2v-10z"></path><path d="M3.6 6.8L12 11l8.4-4.2"></path><path d="M12 11v10"></path></svg></sc-if>
+<sc-if value="{{p.icoOpen}}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M4 10.6h16V19a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"></path><path d="M4 10.6L7.2 5.6l4.8 5"></path><path d="M20 10.6L16.8 5.6l-4.8 5"></path></svg></sc-if>
+<sc-if value="{{p.icoUsado}}" hint-placeholder-val="{{ true }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M20.5 11a8.5 8.5 0 0 0-14.6-5"></path><path d="M3.5 13a8.5 8.5 0 0 0 14.6 5"></path><path d="M5.4 2.2V6h3.8"></path><path d="M18.6 21.8V18h-3.8"></path></svg></sc-if>
+{{p.badge}}
+</span>
+<sc-if value="{{p.tieneFoto}}" hint-placeholder-val="{{ true }}">
+<img src="{{p.img}}" alt="{{p.alt}}" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block">
+</sc-if>
+<sc-if value="{{p.sinFoto}}" hint-placeholder-val="{{ false }}">
+<div style="width: 100%; height: 100%; border-radius: 12px; background: #F1F5F9; border: 1px dashed #C7CEDA; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px; text-align: center; padding: 14px; box-sizing: border-box">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#94A1B3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.6" y="2.4" width="10.8" height="19.2" rx="2.4"></rect><path d="M10.6 5.2h2.8"></path></svg>
+<div style="font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #5F6E84">FOTO PENDIENTE</div>
+</div>
+</sc-if>
+</div>
+
+<div style="padding: 0 18px; display: flex; flex-direction: column; flex: 1 1 auto">
+<div style="min-height: 50px; font-size: 18px; font-weight: 700; line-height: 1.25; letter-spacing: -0.01em">{{p.name}}</div>
+<div style="font-size: 13px; color: #5F6E84">{{p.cond}}</div>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; padding-top: 14px">
+<div style="font-size: 29px; font-weight: 800; letter-spacing: -0.02em">{{p.price}}</div>
+<sc-if value="{{p.off}}" hint-placeholder-val="{{ true }}">
+<div style="font-size: 14px; color: #5F6E84; text-decoration: line-through">{{p.was}}</div>
+</sc-if>
+</div>
+<div style="display: flex; align-items: center; gap: 8px; padding-top: 12px; font-size: 14px; color: #5F6E84"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0848FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3.5 9.5h14l-3.2-3.2"></path><path d="M20.5 14.5h-14l3.2 3.2"></path></svg>
+<span><strong style="color: #0848FF; font-weight: 800">{{p.transfer}}</strong> con transferencia</span>
+</div>
+<div style="display: flex; align-items: center; gap: 8px; padding-top: 9px; font-size: 14px; color: #5F6E84"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5F6E84" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="2.8" y="6" width="18.4" height="12" rx="2.4"></rect><path d="M2.8 10.2h18.4"></path></svg>
+<span>Hasta <strong style="color: #0848FF; font-weight: 800">12 cuotas</strong> con Addi</span>
+</div>
+</div>
+</a>
+
+<div style="padding: 18px">
+<a class="cta" href="{{p.enlace}}" style="display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 52px; border-radius: 13px; background: #0848FF; color: #FFFFFF; font-size: 16px; font-weight: 700; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="M12 5.5L18.5 12 12 18.5"></path></svg>
+Ver equipo
+</a>
+</div>
+
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 10px; padding: 10px 16px 14px; box-sizing: border-box; background: #FFFFFF; border-top: 1px solid #E0E4EB">
+<div style="flex: 1 1 auto; min-width: 0">
+<div style="font-size: 11px; color: #5F6E84">Precio</div>
+<div style="font-size: 18px; font-weight: 800">$ 2.899.000</div>
+</div>
+<a href="#comprar" style="flex: none; display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; border-radius: 10px; background: #0848FF; color: #FFFFFF; font-size: 15px; font-weight: 800; text-decoration: none">Comprar</a>
+<a href="#comprar" aria-label="Consultar por WhatsApp" style="flex: none; width: 48px; height: 48px; border-radius: 10px; background: #128C4B; color: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.5L3 21l1.6-5.4A8.5 8.5 0 1 1 21 12z"></path></svg>
+</a>
+</div>
+
+<div style="background: #080B10; color: #94A1B3">
+<div style="max-width: 1200px; margin: 0 auto; padding: 56px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 13px">
+<img src="assets/914e09bbee632f47b29defceb7204137.webp" alt="Infinity Glass" style="width: 210px; height: auto; display: block; margin-bottom: 2px">
+<div style="font-size: 13px; color: #7E8CA0; margin-bottom: 4px">Infinity Glass S.A.S. · NIT 901.845.112-7</div>
+<div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.45">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C8FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+<span>Calle 13 #15-61, Bogotá<br><span style="color: #7E8CA0">Barrio Ricaurte</span></span>
+</div>
+<div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.45">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C8FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M21 11.8a8.6 8.6 0 0 1-12.6 7.6L3 21l2-5.2A8.6 8.6 0 1 1 21 11.8z"></path></svg>
+<a href="Main.dc.html" style="color: #94A1B3; text-decoration: none"><span style="color: #F5F7FA; font-weight: 600">+57 310 482 9517</span><br><span style="color: #7E8CA0">WhatsApp y llamadas</span></a>
+</div>
+<div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.45">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C8FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><rect x="3" y="5.5" width="18" height="13" rx="2.2"></rect><path d="M3.6 6.6L12 13l8.4-6.4"></path></svg>
+<a href="Main.dc.html" style="color: #F5F7FA; text-decoration: none; font-weight: 600">hola@infinityglass.co</a>
+</div>
+<div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.45">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C8FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><circle cx="12" cy="12" r="8.6"></circle><path d="M12 7.2V12l3.2 2"></path></svg>
+<span>Lunes a sábado, 9:00 a 19:00<br><span style="color: #7E8CA0">Domingos y festivos, cerrado</span></span>
+</div>
+</div>
+<div style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<div style="font-weight: 700; color: #FFFFFF">Información</div>
+<a href="Nosotros.dc.html" style="color: inherit; text-decoration: none">Nosotros</a>
+<a href="Main.dc.html#como-comprar" style="color: inherit; text-decoration: none">Cómo comprar</a>
+<div>Garantía y devoluciones</div>
+<div>Verificación de IMEI</div>
+<div>Preguntas frecuentes</div>
+</div>
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px">
+<div style="font-weight: 700; color: #FFFFFF; font-size: 14px">Medios de pago</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="3" y="4.8" width="18" height="15.4" rx="2.2"></rect><path d="M3 9.4h18M8.2 3v3.4M15.8 3v3.4"></path></svg>Addi</div>
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3.4 9.6L12 4.8l8.6 4.8"></path><path d="M5.4 10.6v7M9.8 10.6v7M14.2 10.6v7M18.6 10.6v7"></path><path d="M3.4 19.4h17.2"></path></svg>PSE</div>
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="7" y="2.8" width="10" height="18.4" rx="2.2"></rect><path d="M10.4 5.6h3.2"></path></svg>Nequi</div>
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="2.6" y="5.6" width="18.8" height="12.8" rx="2.2"></rect><path d="M2.6 9.8h18.8"></path></svg>Visa</div>
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="2.6" y="5.6" width="18.8" height="12.8" rx="2.2"></rect><path d="M2.6 9.8h18.8"></path></svg>Mastercard</div>
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3.4 9.4h14.2l-3.2-3.2"></path><path d="M20.6 14.6H6.4l3.2 3.2"></path></svg>Transferencia</div>
+</div>
+<div style="font-weight: 700; color: #FFFFFF; font-size: 14px; padding-top: 6px">Envíos</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M2.8 6.6h11.4v9.2H2.8zM14.2 9.8h3.6l3.4 3.4v2.6h-7"></path><circle cx="6.6" cy="17.8" r="1.7"></circle><circle cx="17" cy="17.8" r="1.7"></circle></svg>Coordinadora</div>
+<div style="display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #303744; color: #F5F7FA; font-size: 12px; font-weight: 600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3.6 9.6h16.8v9.8H3.6zM3.6 9.6L5.4 4.8h13.2l1.8 4.8"></path><path d="M12 9.6v9.8"></path></svg>Retiro en tienda</div>
+</div>
+</div>
+</div>
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 32px 112px; box-sizing: border-box">
+<div style="border-top: 1px solid #303744; padding-top: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px">
+<div>
+<div style="font-size: 15px; font-weight: 700; color: #FFFFFF">Síguenos</div>
+<div style="font-size: 13px">Publicamos cada entrega, con el IMEI en cámara.</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="social" href="Main.dc.html" aria-label="TikTok de Infinity Glass" style="display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #303744; color: #F5F7FA; font-size: 14px; font-weight: 600; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.2 17.6V5.9l9.4-1.9v11.6"></path><ellipse cx="6.7" cy="17.8" rx="2.5" ry="2.2"></ellipse><ellipse cx="16.1" cy="15.8" rx="2.5" ry="2.2"></ellipse></svg>
+TikTok</a>
+<a class="social" href="Main.dc.html" aria-label="Facebook de Infinity Glass" style="display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #303744; color: #F5F7FA; font-size: 14px; font-weight: 600; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12.1c0 3.9-3.8 7.1-8.5 7.1a10 10 0 0 1-2.4-.3L4.6 20.8l1.3-3.4a6.7 6.7 0 0 1-2.4-5.3C3.5 8.2 7.3 5 12 5s8.5 3.2 8.5 7.1z"></path></svg>
+Facebook</a>
+<a class="social" href="Main.dc.html" aria-label="Instagram de Infinity Glass" style="display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #303744; color: #F5F7FA; font-size: 14px; font-weight: 600; text-decoration: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 8.6h3.1L8 6.1h8l1.7 2.5h3.1v9.8H3.2z"></path><circle cx="12" cy="13.2" r="3.3"></circle></svg>
+Instagram</a>
+</div>
+</div>
+<div class="ig-credito">Diseñado y desarrollado por <a href="https://daniandre18.github.io/portfolio/" target="_blank" rel="noopener">daniandre18</a></div>
+</div>
+</div>
+</div>
+</template>
+<script src="motor.js"></script>
+<script>
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { angle: 0, thumb: 0, tab: 1, favs: {} };
+    this.volarAlCarrito();
+  }
+  // El producto "vuela" al carrito al agregarlo. Solo se animan transform y
+  // opacity (las dos propiedades que no obligan a recalcular diseno), el nodo
+  // vive fuera del flujo y se borra al aterrizar. Quien pidio menos animacion
+  // El producto "vuela" al carrito al agregarlo. Solo se animan transform y
+  // opacity (las dos propiedades que no obligan a recalcular diseno), el nodo
+  // vive fuera del flujo y se borra al aterrizar. Quien pidio menos animacion
+  // ve unicamente el latido del globo.
+  volarAlCarrito() {
+    if (typeof window === 'undefined' || window.__igVuelo) return;
+    window.__igVuelo = true;
+    var listo = function () {
+      if (!document || !document.body) { setTimeout(listo, 30); return; }
+
+      var latir = function (destino) {
+        var globo = destino.querySelector('.ign__globo');
+        if (!globo || !globo.animate) return;
+        globo.animate(
+          [{ transform: 'scale(1)' }, { transform: 'scale(1.5)' }, { transform: 'scale(1)' }],
+          { duration: 420, easing: 'cubic-bezier(.34,1.56,.64,1)' }
+        );
+      };
+
+      var volar = function (destino) {
+        // la foto grande, no la miniatura: el vuelo sale de lo que el cliente esta mirando
+        // querySelector con lista devuelve el primero del DOM, que seria la miniatura:
+        // por eso se pregunta en orden, de la foto grande hacia abajo
+        var foto = document.querySelector('.pn-foto') || document.querySelector('.pm-foto') || document.querySelector('.pn-gal img');
+        var origen = foto || document.querySelector('.pm-visor') || document.querySelector('.pp-visor') || document.querySelector('.pp-gal');
+        if (!origen) return;
+        var a = origen.getBoundingClientRect();
+        var b = destino.getBoundingClientRect();
+        // si la cabecera ya se fue hacia arriba, el paquete va a la esquina
+        if (b.bottom < 8) b = { left: window.innerWidth - 64, top: 12, width: 40, height: 40 };
+
+        var nodo, ancho, alto;
+        if (foto) {
+          nodo = foto.cloneNode(true);
+          var escala = Math.min(1, 190 / Math.max(a.width, a.height));
+          ancho = a.width * escala; alto = a.height * escala;
+          nodo.style.objectFit = 'contain';
+        } else {
+          nodo = document.createElement('div');
+          ancho = 92; alto = 172;
+          nodo.style.background = 'linear-gradient(160deg,#1B2430,#0A0E14)';
+          nodo.style.border = '2px solid #3B4A5F';
+          nodo.style.borderRadius = '16px';
+        }
+        nodo.setAttribute('aria-hidden', 'true');
+        nodo.style.position = 'fixed';
+        nodo.style.left = (a.left + a.width / 2 - ancho / 2) + 'px';
+        nodo.style.top = (a.top + a.height / 2 - alto / 2) + 'px';
+        nodo.style.width = ancho + 'px';
+        nodo.style.height = alto + 'px';
+        nodo.style.margin = '0';
+        nodo.style.padding = '0';
+        nodo.style.zIndex = '2000';
+        nodo.style.pointerEvents = 'none';
+        nodo.style.willChange = 'transform, opacity';
+        document.body.appendChild(nodo);
+
+        if (!nodo.animate) { nodo.parentNode.removeChild(nodo); return; }
+        var dx = (b.left + b.width / 2) - (a.left + a.width / 2);
+        var dy = (b.top + b.height / 2) - (a.top + a.height / 2);
+        var anim = nodo.animate([
+          { transform: 'translate(0,0) scale(1)', opacity: 1, offset: 0 },
+          { transform: 'translate(' + (dx * 0.55) + 'px,' + (dy * 0.45 - 90) + 'px) scale(.55)', opacity: .95, offset: .55 },
+          { transform: 'translate(' + dx + 'px,' + dy + 'px) scale(.08)', opacity: .15, offset: 1 }
+        ], { duration: 760, easing: 'cubic-bezier(.45,.05,.25,1)' });
+        var limpiar = function () { if (nodo.parentNode) nodo.parentNode.removeChild(nodo); };
+        anim.onfinish = limpiar;
+        anim.oncancel = limpiar;
+        setTimeout(limpiar, 1600);   // por si la pestana se va a segundo plano
+      };
+
+      document.addEventListener('click', function (ev) {
+        var boton = ev.target && ev.target.closest ? ev.target.closest('[data-agregar]') : null;
+        if (!boton) return;
+        var destino = document.querySelector('.ign__carrito, [data-carrito]');
+        if (!destino) return;
+        var quieto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!quieto) volar(destino);
+        latir(destino);
+        /* El panel se abre cuando el producto aterriza, no antes: si se abre
+           de una, tapa la animacion y el cliente no ve a donde fue el equipo. */
+        setTimeout(function () {
+          if (window.igNav && window.igNav.verCarrito) window.igNav.verCarrito(true);
+        }, quieto ? 120 : 720);
+      }, true);
+    };
+    listo();
+  }
+
+  renderVals() {
+    // claro por defecto; el boton de la cabecera enciende el modo oscuro
+    const oscuro = !!this.state.oscuro;
+    // Pestanas del bloque de detalles: la primera activa por defecto.
+    const tab = this.state.tab || 1;
+    const pestana = (n) => ({
+      activo: tab === n,
+      color: tab === n ? '#0848FF' : '#5F6E84',
+      borde: tab === n ? '3px solid #0848FF' : '3px solid transparent',
+      ir: () => this.setState({ tab: n })
+    });
+
+    const angle = this.state.angle;
+    const a = ((angle % 360) + 360) % 360;
+    let face = 'Frente';
+    if (a >= 45 && a < 135) face = 'Lateral';
+    else if (a >= 135 && a < 225) face = 'Trasera';
+    else if (a >= 225 && a < 315) face = 'Lateral';
+    const thumbSrc = [
+      { label: '360°', alt: 'Vista 360 grados' },
+      { label: 'Frente', alt: 'Foto de frente' },
+      { label: 'Trasera', alt: 'Foto trasera' },
+      { label: 'Bordes', alt: 'Foto de los bordes' },
+      { label: 'Batería', alt: 'Captura de salud de batería' },
+      { label: 'Video', alt: 'Video del equipo' }
+    ];
+    const thumbs = thumbSrc.map((t, i) => {
+      const sel = this.state.thumb === i;
+      return {
+        label: t.label,
+        alt: t.alt,
+        color: sel ? '#101318' : '#5F6E84',
+        border: sel ? '2px solid #0848FF' : '1px solid #E0E4EB',
+        pick: () => this.setState({ thumb: i })
+      };
+    });
+    const report = [
+      { k: 'Pantalla', v: 'Sin uso, con película original de fábrica', bg: '#FFFFFF' },
+      { k: 'Salud de batería', v: '100% · 2 ciclos de carga', bg: '#F1F5F9' },
+      { k: 'Carcasa y bordes', v: 'Titanio azul, sin marcas ni microrayas', bg: '#FFFFFF' },
+      { k: 'Cámaras y Face ID', v: 'Las tres cámaras y Face ID probados y funcionando', bg: '#F1F5F9' },
+      { k: 'Botones y puertos', v: 'Volumen, botón de acción y puerto USB-C probados', bg: '#FFFFFF' },
+      { k: 'iCloud y operador', v: 'Libre de iCloud y desbloqueado de fábrica', bg: '#F1F5F9' },
+      { k: 'Reparaciones previas', v: 'Ninguna · todas las piezas son originales', bg: '#FFFFFF' }
+    ];
+    const pays = [
+      { label: 'Addi' }, { label: 'PSE' }, { label: 'Nequi' },
+      { label: 'Visa' }, { label: 'Mastercard' }, { label: 'Transferencia' }
+    ];
+    // Mismos equipos y precios que el catalogo del home: si un modelo aparece en
+    // las dos pantallas tiene que valer lo mismo.
+    const cop = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 });
+    const money = (v, ph) => (typeof v === 'number' ? cop.format(v).replace(/\u00a0/g, ' ') : ph);
+    const tonos = {
+      sellado: { bg: '#E3F4EC', color: '#0B5C39' },
+      open:    { bg: '#E6EDFF', color: '#0848FF' },
+      usado:   { bg: '#FDF0DC', color: '#8A4B08' }
+    };
+    const favs = this.state.favs || {};
+    const vecinos = [
+      { name: 'iPhone 14 128 GB', cond: 'Usado grado A · Batería 92%',
+        estado: 'usado', etiqueta: 'Usado grado A',
+        img: 'assets/0ce668a7bd218dea2e05be77b4dd89d6.webp',
+        valor: 1699000, antes: null, transferencia: 1639000 },
+      { name: 'iPhone 13 128 GB', cond: 'Usado grado A · Batería 89%',
+        estado: 'usado', etiqueta: 'Usado grado A',
+        img: 'assets/b37e990368e842a5c6bcb4540f182744.webp',
+        valor: 1349000, antes: 1499000, transferencia: 1299000 },
+      { name: 'iPhone 13 256 GB', cond: 'Usado grado A · Batería 94%',
+        estado: 'usado', etiqueta: 'Usado grado A',
+        img: 'assets/b37e990368e842a5c6bcb4540f182744.webp',
+        valor: 1749000, antes: null, transferencia: 1689000 },
+      { name: 'Cargador 20W original', cond: 'Nuevo sellado · USB-C',
+        estado: 'sellado', etiqueta: 'Nuevo sellado',
+        img: null,
+        valor: 149000, antes: null, transferencia: 144000 }
+    ];
+    const related = vecinos.map((p, i) => {
+      const off = (typeof p.valor === 'number' && typeof p.antes === 'number' && p.antes > p.valor);
+      const tono = tonos[p.estado];
+      const fav = !!favs[i];
+      return {
+        name: p.name, cond: p.cond, off: off,
+        // sellado -> ficha de equipo nuevo; usado y open box -> ficha de unidad unica
+        enlace: p.estado === 'sellado' ? 'ProductoNuevo.dc.html' : 'Producto.dc.html',
+        tieneFoto: !!p.img, sinFoto: !p.img, img: p.img,
+        alt: p.name + ', foto real de la unidad',
+        badge: off ? Math.round((1 - p.valor / p.antes) * 100) + '% OFF' : p.etiqueta,
+        badgeBg: off ? '#0848FF' : tono.bg,
+        badgeColor: off ? '#FFFFFF' : tono.color,
+        icoSellado: !off && p.estado === 'sellado',
+        icoOpen: !off && p.estado === 'open',
+        icoUsado: !off && p.estado === 'usado',
+        price: money(p.valor, '$ [PRECIO]'),
+        was: money(p.antes, '$ [ANTES]'),
+        transfer: money(p.transferencia, '$ [CON TRANSFERENCIA]'),
+        fav: fav,
+        favFill: fav ? '#0848FF' : 'none',
+        favColor: fav ? '#0848FF' : '#94A1B3',
+        favLabel: (fav ? 'Quitar de favoritos: ' : 'Guardar en favoritos: ') + p.name,
+        toggleFav: () => {
+          const next = Object.assign({}, this.state.favs);
+          next[i] = !next[i];
+          this.setState({ favs: next });
+        }
+      };
+    });
+    return {
+      tema: oscuro ? 'oscuro' : 'claro',
+      temaOscuro: oscuro,
+      temaClaro: !oscuro,
+      temaLabel: oscuro ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro',
+      cambiarTema: () => this.setState({ oscuro: !oscuro }),
+      t1: pestana(1), t2: pestana(2), t3: pestana(3),
+      esTab1: tab === 1, esTab2: tab === 2, esTab3: tab === 3,
+      angle,
+      rot: angle,
+      is360: this.state.thumb === 0,
+      angleLabel: face + ' · ' + a + '°',
+      thumbs,
+      report,
+      pays,
+      related,
+      onAngle: (e) => this.setState({ angle: Number(e.target.value) }),
+      prev: () => this.setState({ angle: (this.state.angle + 345) % 360 }),
+      next: () => this.setState({ angle: (this.state.angle + 15) % 360 })
+    };
+  }
+}
+
+window.__igArrancar(Component, ["volarAlCarrito"]);
+</script>
+</body>
+</html>
