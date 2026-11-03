@@ -1,0 +1,87 @@
+/* Pantalla de carga de Infinity Glass.
+   Vive fuera del lienzo de diseno: no agrega nodos a la pagina, se dibuja con
+   los pseudoelementos de <html> y por eso aparece con el primer byte, antes
+   de que corra ningun script. motor.js pone la clase .ig-listo cuando la
+   primera pantalla ya tiene sus fuentes e imagenes, y entonces se desvanece.
+
+   Mientras tanto las animaciones de la pagina quedan en pausa, para que la
+   entrada del banner arranque cuando el visitante ya la puede ver y no detras
+   del cargador. */
+
+html::before,
+html::after {
+  position: fixed;
+  z-index: 2147483646;
+  pointer-events: none;
+  transition: opacity .45s ease, visibility 0s linear .45s;
+}
+
+/* Fondo, con el mismo degradado del banner, y el nombre de la marca. */
+html::before {
+  content: "Infinity Glass";
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 104px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #080B10 0%, #111827 100%);
+  color: #94A1B3;
+  font: 600 12px/1 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  pointer-events: auto;              /* nada debajo recibe clics mientras carga */
+}
+
+/* Anillo azul de la marca. */
+html::after {
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin: -38px 0 0 -23px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, .1);
+  border-top-color: #0848FF;
+  border-right-color: #00C8FF;
+  box-sizing: border-box;
+  animation: ig-cargador-giro .8s linear infinite;
+}
+
+@keyframes ig-cargador-giro { to { transform: rotate(360deg); } }
+
+/* Listo: se desvanece y deja de interceptar clics. */
+html.ig-listo::before,
+html.ig-listo::after {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+html.ig-listo::after { animation: none; }
+
+/* Red de seguridad: si el script no llegara a correr, el cargador se va solo. */
+html:not(.ig-listo)::before,
+html:not(.ig-listo)::after {
+  animation-name: ig-cargador-giro, ig-cargador-fuera;
+  animation-duration: .8s, .01s;
+  animation-timing-function: linear, linear;
+  animation-iteration-count: infinite, 1;
+  animation-delay: 0s, 6s;
+  animation-fill-mode: none, forwards;
+}
+html:not(.ig-listo)::before { animation-name: none, ig-cargador-fuera; }
+
+@keyframes ig-cargador-fuera { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+
+/* Las animaciones de la pagina esperan a que el cargador se vaya. */
+html:not(.ig-listo) body *,
+html:not(.ig-listo) body *::before,
+html:not(.ig-listo) body *::after {
+  animation-play-state: paused !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html::after { animation-duration: 2.4s; }
+  html::before, html::after { transition-duration: .15s, 0s; transition-delay: 0s, .15s; }
+}

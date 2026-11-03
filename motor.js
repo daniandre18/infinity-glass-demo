@@ -177,6 +177,58 @@
     });
   }
 
+  // ---------- carga inicial ----------
+  /* Las fotos fuera de la cabecera se piden cuando se van a ver y no todas
+     de golpe al abrir: asi no le quitan ancho de banda a las fuentes ni al
+     banner. Se marca sobre la copia de la plantilla, antes de meterla en la
+     pagina, porque una <img> empieza a descargarse apenas entra al documento. */
+  function diferirImagenes(fragmento) {
+    var imgs = fragmento.querySelectorAll('img');
+    for (var i = 0; i < imgs.length; i++) {
+      var img = imgs[i];
+      if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+      if (img.hasAttribute('loading') || img.closest('.ign')) continue;
+      img.setAttribute('loading', 'lazy');
+    }
+  }
+
+  /* El cargador (cargador.css) se va cuando la primera pantalla esta
+     completa: fuentes listas e imagenes visibles descargadas. Nunca espera
+     mas de MAX_ESPERA; con conexion lenta es mejor mostrar la pagina
+     mientras termina que dejar al visitante mirando un anillo. */
+  var MAX_ESPERA = 2500;
+  function quitarCargador(raiz) {
+    var hecho = false;
+    function listo() {
+      if (hecho) return;
+      hecho = true;
+      requestAnimationFrame(function () {
+        document.documentElement.classList.add('ig-listo');
+      });
+    }
+    setTimeout(listo, MAX_ESPERA);
+
+    var esperas = [];
+    if (document.fonts && document.fonts.load) {
+      ['400', '600', '700', '800'].forEach(function (peso) {
+        esperas.push(document.fonts.load(peso + ' 1em "Plus Jakarta Sans"').catch(function () {}));
+      });
+    }
+    var alto = window.innerHeight || 800;
+    var imgs = raiz.querySelectorAll('img');
+    for (var i = 0; i < imgs.length; i++) {
+      var img = imgs[i];
+      if (img.complete) continue;
+      var caja = img.getBoundingClientRect();
+      if (caja.bottom < 0 || caja.top > alto || !caja.width) continue;   // no se ve de entrada
+      esperas.push(new Promise(function (ok) {
+        img.addEventListener('load', ok, { once: true });
+        img.addEventListener('error', ok, { once: true });
+      }));
+    }
+    Promise.all(esperas).then(listo, listo);
+  }
+
   // ---------- ciclo de dibujo ----------
   window.__igArrancar = function (Componente, metodos) {
     var plantilla = document.getElementById('ig-plantilla');
@@ -188,6 +240,7 @@
       var vals = comp.renderVals ? comp.renderVals() : {};
       var copia = plantilla.content.cloneNode(true);
       procesar(copia, vals);
+      diferirImagenes(copia);
       raiz.textContent = '';
       raiz.appendChild(copia);
       enlazar(raiz);
@@ -201,5 +254,6 @@
       requestAnimationFrame(function () { pendiente = false; pintar(); });
     };
     pintar();
+    quitarCargador(raiz);
   };
 })();
